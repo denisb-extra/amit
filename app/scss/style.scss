@@ -86,6 +86,27 @@ $lw: 1370px;
   	font-family: 'Assistant-SemiBold';
 	font-weight: 600;
 }
+
+
+@font-face { 
+	font-family: 'Raleway-Regular'; 
+	src: url('../fonts/Raleway-Regular.ttf') format('truetype'); 
+} 
+@mixin f-raleway-r {
+	font-family: 'Raleway-Regular';
+	font-weight: 400;
+}
+
+@font-face { 
+	font-family: 'Raleway-Bold'; 
+	src: url('../fonts/Raleway-Bold.ttf') format('truetype'); 
+} 
+@mixin f-raleway-b {
+	font-family: 'Raleway-Bold';
+	font-weight: 700;
+}
+
+
 /* /Fonts */
 
 
@@ -99,7 +120,7 @@ body {
 	position: relative;
 	margin: 0;
   	padding: 0;
-  	overflow-x: hidden;
+  	overflow: hidden;
   	@include f-r;
   	font-size: 18px;
 }

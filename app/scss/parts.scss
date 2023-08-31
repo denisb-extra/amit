@@ -33,6 +33,14 @@ section {
 	&.white {
 		color: #fff;
 	}
+	&.narrow {
+		max-width: 770px;
+		margin: auto;
+		p {
+			margin-right: auto;
+			margin-left: auto;
+		}
+	}
 	p,ul,li,h1,h2,h3,h4,h5,img {
 		margin-top: 15px;
 	}
@@ -119,6 +127,18 @@ section {
 	}
 }
 
+
+.button-more {
+	@include f-sb;
+	font-size: 19px;
+	color: var(--color-text);
+
+	display: inline-block;
+	margin-top: 25px;
+	img {
+		margin-right: 5px;
+	}
+}
 .section-title {
 	@include f-b;
 	font-size: 36px;
