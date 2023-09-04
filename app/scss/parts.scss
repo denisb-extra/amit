@@ -141,10 +141,13 @@ section {
 }
 .section-title {
 	@include f-b;
-	font-size: 36px;
+	font-size: 52px;
 	color: var(--color-text);
 	&.white {
 		color: #fff;
+	}
+	span {
+		color: var(--color-main);
 	}
 	@media only screen and (max-width : $tw) {
 		font-size: 30px;
