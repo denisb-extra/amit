@@ -774,3 +774,124 @@ section.carousel {
     }
 }
 /* --------------------- /Section carousel ---------------------- */
+
+
+
+/* ---------------------- Section sectors ---------------------- */
+section.sectors {
+    .swiper-container {
+        margin-top: 55px;
+        .swiper-wrapper {
+            align-items: center;
+        }
+        .swiper-slide {
+            text-align: center;
+            transform: translateX(130px);
+            width: 125px !important;
+            &.swiper-slide-active {
+                margin-left: 240px;
+                margin-right: 150px;
+                .box-sector {
+                    .info {
+                        width: 430px;
+                        opacity: 1;
+                    }
+                    .circle {
+                        transform: scale(1.2) translateX(-10px);
+                    }
+                }
+            }
+        }
+        .nav {
+            display: flex;
+            justify-content: center;
+            margin-top: 35px;
+            .arrow {
+                height: 50px;
+                width: 50px;
+                background: var(--color-main);
+                border-radius: 100%;
+                cursor: pointer;
+
+                @include flex-center;
+                margin: 15px;
+            }
+        }
+    }
+}
+/* --------------------- /Section sectors ---------------------- */
+
+.box-sector {
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .circle {
+        width: 115px;
+        height: 115px;
+        flex-shrink: 0;
+        overflow: hidden;
+        border-radius: 100%;
+        background: var(--color-second);
+        border: 2px solid #fff;
+        @include flex-center;
+        flex-direction: column;
+        padding: 10px;
+        position: relative;
+        z-index: 2;
+        transition: 0.5s;
+        .image {
+            img {
+                height: 30px;
+            }
+            
+        }
+
+        .text {
+            @include f-b;
+            font-size: 17px;
+            color: #fff;
+            margin-top: 5px;
+            text-align: center;
+        }
+    }
+
+    .info {
+   
+        background: url("../images/index/bg-slide.png") center center / cover no-repeat;
+        width: 450px;
+        height: 230px;
+        width: 0;
+        opacity: 0;
+        transition: 0.5s;
+        flex-shrink: 0;
+        padding: 30px;
+        padding-right: 100px;
+        transform: translateX(50px);
+        overflow: hidden;
+        text-align: right;
+        .content {
+            position: relative;
+            z-index: 2;
+            width: 320px;
+        }
+
+        .button-more {
+            position: relative;
+            z-index: 2;
+            color: #fff;
+        }
+        &:after {
+            content: "";
+            position: absolute;
+            display: block;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(5, 36, 74, 0.83);
+
+        }
+        
+    }
+}
