@@ -4,32 +4,39 @@ $lw: 1370px;
 
 
 :root {
-    --color-text: #3C3C3B;
+	--color-text: #3C3C3B;
 	--color-main: #FFD600;
 	--color-second: #05244A;
-	
+
 }
 
 @mixin border {
 	$red: random(256)-1;
 	$green: random(256)-1;
 	$blue: random(256)-1;
- 	border: 1px solid red;
- 	border-color: rgb($red, $green, $blue);
+	border: 1px solid red;
+	border-color: rgb($red, $green, $blue);
 }
 
 @mixin placeholder-color($color) {
-	&::-webkit-input-placeholder { /* WebKit browsers */
-	  color: $color;
+	&::-webkit-input-placeholder {
+		/* WebKit browsers */
+		color: $color;
 	}
-	&:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-	  color: $color;
+
+	&:-moz-placeholder {
+		/* Mozilla Firefox 4 to 18 */
+		color: $color;
 	}
-	&::-moz-placeholder { /* Mozilla Firefox 19+ */
-	  color: $color;
+
+	&::-moz-placeholder {
+		/* Mozilla Firefox 19+ */
+		color: $color;
 	}
-	&:-ms-input-placeholder { /* Internet Explorer 10+ */
-	  color: $color;
+
+	&:-ms-input-placeholder {
+		/* Internet Explorer 10+ */
+		color: $color;
 	}
 }
 
@@ -41,70 +48,99 @@ $lw: 1370px;
 
 /* Fonts */
 
-@font-face { 
-	font-family: 'Assistant-Regular'; 
-	src: url('../fonts/Assistant-Regular.ttf') format('truetype'); 
-} 
+@font-face {
+	font-family: 'Assistant-Regular';
+	src: url('../fonts/Assistant-Regular.ttf') format('truetype');
+}
+
 @mixin f-r {
 	font-family: 'Assistant-Regular';
 	font-weight: 400;
 }
 
 
-@font-face { 
-	font-family: 'Assistant-Light'; 
-	src: url('../fonts/Assistant-Light.ttf') format('truetype'); 
-} 
+@font-face {
+	font-family: 'Assistant-Light';
+	src: url('../fonts/Assistant-Light.ttf') format('truetype');
+}
+
 @mixin f-l {
 	font-family: 'Assistant-Light';
 	font-weight: 300;
 }
 
-@font-face { 
-	font-family: 'Assistant-Bold'; 
-	src: url('../fonts/Assistant-Bold.ttf') format('truetype'); 
-} 
-@mixin f-b {
-  	font-family: 'Assistant-Bold';
-	  font-weight: 700;
+@font-face {
+	font-family: 'Assistant-Bold';
+	src: url('../fonts/Assistant-Bold.ttf') format('truetype');
 }
 
-@font-face { 
-	font-family: 'Assistant-ExtraBold'; 
-	src: url('../fonts/Assistant-ExtraBold.ttf') format('truetype'); 
-} 
+@mixin f-b {
+	font-family: 'Assistant-Bold';
+	font-weight: 700;
+}
+
+@font-face {
+	font-family: 'Assistant-ExtraBold';
+	src: url('../fonts/Assistant-ExtraBold.ttf') format('truetype');
+}
+
 @mixin f-xb {
-  	font-family: 'Assistant-ExtraBold';
+	font-family: 'Assistant-ExtraBold';
 	font-weight: 800;
 }
 
-@font-face { 
-	font-family: 'Assistant-SemiBold'; 
-	src: url('../fonts/Assistant-SemiBold.ttf') format('truetype'); 
-} 
+@font-face {
+	font-family: 'Assistant-SemiBold';
+	src: url('../fonts/Assistant-SemiBold.ttf') format('truetype');
+}
+
 @mixin f-sb {
-  	font-family: 'Assistant-SemiBold';
+	font-family: 'Assistant-SemiBold';
 	font-weight: 600;
 }
 
 
-@font-face { 
-	font-family: 'Raleway-Regular'; 
-	src: url('../fonts/Raleway-Regular.ttf') format('truetype'); 
-} 
+@font-face {
+	font-family: 'Raleway-Regular';
+	src: url('../fonts/Raleway-Regular.ttf') format('truetype');
+}
+
 @mixin f-raleway-r {
 	font-family: 'Raleway-Regular';
 	font-weight: 400;
 }
 
-@font-face { 
-	font-family: 'Raleway-Bold'; 
-	src: url('../fonts/Raleway-Bold.ttf') format('truetype'); 
-} 
+@font-face {
+	font-family: 'Raleway-Bold';
+	src: url('../fonts/Raleway-Bold.ttf') format('truetype');
+}
+
 @mixin f-raleway-b {
 	font-family: 'Raleway-Bold';
 	font-weight: 700;
 }
+
+@font-face {
+	font-family: 'Almoni-Tzar-Regular';
+	src: url('../fonts/ALMONI-TZAR-AAA-REGULAR.otf') format('truetype');
+}
+
+@mixin f-almoni-tzar-r {
+	font-family: 'Almoni-Tzar-Regular';
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: 'Almoni-Tzar-Bold';
+	src: url('../fonts/ALMONI-TZAR-AAA-BOLD.otf') format('truetype');
+}
+
+@mixin f-almoni-tzar-b {
+	font-family: 'Almoni-Tzar-Bold';
+	font-weight: 700;
+}
+
+
 
 
 /* /Fonts */
@@ -116,13 +152,14 @@ html {
 	margin: 0 !important;
 	overflow-x: hidden;
 }
+
 body {
 	position: relative;
 	margin: 0;
-  	padding: 0;
-  	overflow: hidden;
-  	@include f-r;
-  	font-size: 18px;
+	padding: 0;
+	overflow: hidden;
+	@include f-r;
+	font-size: 18px;
 }
 
 input {
@@ -135,14 +172,23 @@ a {
 	color: inherit;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
 	box-sizing: border-box;
 	direction: rtl;
 }
 
-p,h1,h2,h3,h4,h5,h6 {
-    margin: 0;
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
 }
+
 ul {
 	-webkit-padding-start: 0;
 	list-style: none;
@@ -150,8 +196,111 @@ ul {
 	padding: 0;
 }
 
+// Moved common styles for circles to a mixin for clarity
+@mixin commonCircleStyles {
+	position: relative;
+	border-radius: 210px;
+	border: 1px dashed black;
+	max-width: 400px;
+	max-height: 400px;
+	width: 25vw;
+	height: 25vw;
+	display: flex;
+	align-content: center;
+	align-items: center;
+	justify-content: center;
+}
 
 
+.title {
+	font-family: Almoni-Tzar-Bold;
+	font-size: 35px;
+	text-align: center;
+
+	span {
+		color: var(--color-main);
+	}
+}
+
+
+.swiper-container {
+	
+	.carousel {
+		width: 100%;
+		overflow: hidden;
+		position: relative;
+		display: flex;
+		justify-content: center;
+		padding: 0 100px;
+	  }
+	  
+	  .carousel-items {
+		display: flex;
+		transition: all 0.3s ease;
+		overflow: hidden;
+	  }
+	  
+	  .carousel-item {
+		flex: 0 0 auto;
+		width: 120px;
+		min-height: 265px;
+		text-align: center;
+		display: flex;
+		align-items: center;
+
+		.circle {
+			display: flex;
+			background-color: #05244A;
+			border: 2px solid white;
+			border-radius: 50%;
+			height: 112px;
+			width: 112px;
+			z-index: 2;
+			margin-right: -60px;
+		}
+
+		.content {
+			display: none;
+			background-color: #05244A;
+			height: 262px;
+			width: 447px;
+			position: absolute;
+			z-index: 0;
+			top: 0;
+		}
+	  }
+	  
+	  .carousel-item.active {
+		width: 520px;
+		background: transparent;
+		margin-right: 10px;
+
+		.circle {
+			height: 144px;
+			width: 144px;
+			margin-right: -70px;
+		}
+
+		.content {
+			display:flex;
+		}
+	  }
+
+	  .navigation {
+		display: flex;
+		justify-content: center;
+		padding-top: 40px;
+		button {
+			border: none;
+			background-color: var(--color-main);
+			border-radius: 50%;
+			padding: 5px;
+		}
+	  }
+
+
+	  
+}
 
 @import 'parts';
 @import 'index';

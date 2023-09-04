@@ -1,27 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel='shortcut icon' type='image/x-icon' href='images/favicon.ico' />
 	<title>חברה | תיאור</title>
-	
+
 	<script src="js/jquery-3.2.0.min.js"></script>
 	<script src="js/main.js"></script>
 
 	<link rel="stylesheet" href="plugins/swiper/swiper.css">
-	<script src="plugins/swiper/swiper.js"></script> 
-	
+	<script src="plugins/swiper/swiper.js"></script>
+
 	<link rel="stylesheet" href="plugins/fancybox/jquery.fancybox.css">
-	<script src="plugins/fancybox/jquery.fancybox.js"></script> 
-	
-	<script src="plugins/scrollreveal/scrollreveal.js"></script> 
-	
+	<script src="plugins/fancybox/jquery.fancybox.js"></script>
+
+	<script src="plugins/scrollreveal/scrollreveal.js"></script>
+
 	<script src="plugins/mmenu/jquery-simple-mobilemenu.js"></script>
 	<link rel="stylesheet" href="plugins/mmenu/styles/jquery-simple-mobilemenu-slide.css">
-	
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+
+	<!-- JavaScript -->
+	<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+
+
+
 	<link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 	<header class="home">
 		<div class="section-inner">
@@ -38,7 +48,8 @@
 								<a href="#">ביטוח אמבולטורי</a>
 								<ul class="sub-menu">
 									<li class="menu-item"><a href="#">מימוש זכויות רפואיות</a></li>
-									<li class="menu-item menu-item menu-item-has-children"><a href="#">פתרונות פיננסיים</a>
+									<li class="menu-item menu-item menu-item-has-children"><a href="#">פתרונות
+											פיננסיים</a>
 										<ul class="sub-menu">
 											<li class="menu-item"><a href="#">מימוש זכויות רפואיות</a></li>
 											<li class="menu-item"><a href="#">פתרונות פיננסיים</a></li>
@@ -73,7 +84,7 @@
 
 	<section class="hero">
 		<div class="bg">
-			
+
 			<img src="images/index/bg-hero.png">
 			<!---
 			<video src="videos/video.mp4" autoplay loop muted playsinline></video>
@@ -94,13 +105,13 @@
 			</div>
 		</div>
 	</section>
-	
+
 	<section class="booking-form">
 		<div class="section-inner">
 			<div class="part-track-package">
 				<form>
 					<input type="text" placeholder="יש להזין מספר משלוח עד 10 תווים">
-					<input type="submit" value="מעקב משלוח">	
+					<input type="submit" value="מעקב משלוח">
 				</form>
 			</div>
 
@@ -113,7 +124,7 @@
 					<img src="images/index/booking/offer.svg">
 					<span> הצעת מחיר </span>
 				</a>
-				
+
 			</div>
 
 			<div class="part-tel">
@@ -122,10 +133,10 @@
 					<span>03-9720000</span>
 				</a>
 			</div>
-		
+
 		</div>
 	</section>
-	
+
 
 	<section class="about-short">
 		<div class="section-inner">
@@ -134,7 +145,8 @@
 			</div>
 
 			<div class="content narrow centered">
-				<p>ניסיון של 70+ שנה, הביא אותנו לגיבוש נוסחה מנצחת המייצרת סטנדרט בינלאומי וברמה הגבוהה ביותר בעולם השילוח, סטנדרט ה-A+ שמציב אותנו בין חברות השילוח המובילות בתעשייה. </p>
+				<p>ניסיון של 70+ שנה, הביא אותנו לגיבוש נוסחה מנצחת המייצרת סטנדרט בינלאומי וברמה הגבוהה ביותר בעולם
+					השילוח, סטנדרט ה-A+ שמציב אותנו בין חברות השילוח המובילות בתעשייה. </p>
 			</div>
 
 			<a href="#" class="button-more">
@@ -146,14 +158,727 @@
 
 	<section class="experience">
 		<div class="section-inner">
-			
+
+			<div class="side right-side">
+				<div class="title">
+					9.2 בסקר שביעות רצון לקוחות
+				</div>
+
+				<div class="content">
+					<p>
+						עפ”י סקר שערכנו בקרב לקוחות החברה בו בדקנו את שביעות רצונם ממספר מאפיינים במתן השירות, קיבלנו את
+						הציון הגבוה 9.2.
+						ציון זה משקף את הסטנדרט הגבוה שלנו בכל פעולה המתבצעת, <span> ללא פשרות! </span>
+						*סקר לקוחות עמית 2022
+
+
+					</p>
+				</div>
+			</div>
+
+			<div class="side left-side">
+
+				<div class="circle">
+					<img class="main" src="images/index/experience/a-standard.png" alt="">
+
+
+					<div class="item knowledge">
+						<h2>Knowledge</h2>
+						<div class="icon">
+							<img src="images/icons/knowledge_icon.png" alt="">
+						</div>
+						<div class="window">
+							<div class="window-inner">
+								<div class="title">
+									<img src="images/icons/small_plus.svg" alt="">
+									70
+								</div>
+								<div class="content">
+									<span>שנות וותק חברה </span><br>
+									הוא נסיון שאין לו מתחרים
+								</div>
+							</div>
+
+						</div>
+					</div>
+
+					<div class="item approach">
+						<h2>Human Approach</h2>
+						<div class="icon">
+							<img src="images/icons/humen_approach_icon.png" alt="">
+						</div>
+						<div class="window">
+							<div class="window-inner">
+								<div class="title">
+									<img src="images/icons/small_plus.svg" alt="">
+									70
+								</div>
+								<div class="content">
+									<span>שנות וותק חברה </span><br>
+									הוא נסיון שאין לו מתחרים
+								</div>
+							</div>
+
+						</div>
+					</div>
+
+					<div class="item integrity">
+						<h2>Integrity</h2>
+						<div class="icon">
+							<img src="images/icons/Integrity_icon.png" alt="">
+						</div>
+						<div class="window">
+							<div class="window-inner">
+								<div class="title">
+									<img src="images/icons/small_plus.svg" alt="">
+									70
+								</div>
+								<div class="content">
+									<span>שנות וותק חברה </span><br>
+									הוא נסיון שאין לו מתחרים
+								</div>
+							</div>
+
+						</div>
+					</div>
+
+					<div class="item experience">
+						<h2>Experience</h2>
+						<div class="icon">
+							<img src="images/icons/Experience_icon.png" alt="">
+						</div>
+						<div class="window">
+							<div class="window-inner">
+								<div class="title">
+									<img src="images/icons/small_plus.svg" alt="">
+									70
+								</div>
+								<div class="content">
+									<span>שנות וותק חברה </span><br>
+									הוא נסיון שאין לו מתחרים
+								</div>
+							</div>
+
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+
 		</div>
 	</section>
 
+	<section class="services">
+		<!-- Repeat this block 12 times -->
+		<div class="grid-container" id="services-section">
+			<!-- Repeat this block 12 times -->
+			<!-- Item 1 -->
+			<div class="grid-item" data-bg="images/index/services/background2.png">
+				<a href="#">
+					<div class="flip-card">
+						<div class="flip-card-inner">
+							<div class="flip-card-front">
+								<img class="item-image" src="images/index/services/grid_icon_1.png"
+									alt="Image description">
+								<div class="item-content">
+									<span class="item-title">יבוא</span>
+								</div>
+							</div>
+							<div class="flip-card-back">
+								<div class="title">
+									<span> יבוא</span>
+								</div>
+								<div class="content">
+									הובלה יבשתית
+									כספק של שרשרת אספקה מלאה, קבוצת עמית מתמחה גם בשירותי הובלות יבשתיות בארץ מנמלי הים
+									והאוויר ביבוא וביצוא.
+									ספקי ההובלה היבשתית של החברה נבחרו בקפדנות על סמך אמינותם, עמידה בלוח הזמנים, איכות
+									ציוד הובלה ועמידה במחירים תחרותיים.
+								</div>
+
+								<div class="read-more">
+									לשירות
+									<img src="images/icons/yellow-arrow-left-small.png" alt="">
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</a>
+			</div>
+
+			<div class="grid-item" data-bg="images/index/services/background2.png">
+				<a href="#">
+					<div class="flip-card">
+						<div class="flip-card-inner">
+							<div class="flip-card-front">
+								<img class="item-image" src="images/index/services/grid_icon_2.png"
+									alt="Image description">
+								<div class="item-content">
+									<span class="item-title">יצוא</span>
+								</div>
+							</div>
+							<div class="flip-card-back">
+								<div class="title">
+									<span> יצוא</span>
+								</div>
+								<div class="content">
+									הובלה יבשתית
+									כספק של שרשרת אספקה מלאה, קבוצת עמית מתמחה גם בשירותי הובלות יבשתיות בארץ מנמלי הים
+									והאוויר ביבוא וביצוא.
+									ספקי ההובלה היבשתית של החברה נבחרו בקפדנות על סמך אמינותם, עמידה בלוח הזמנים, איכות
+									ציוד הובלה ועמידה במחירים תחרותיים.
+								</div>
+
+								<div class="read-more">
+									לשירות
+									<img src="images/icons/yellow-arrow-left-small.png" alt="">
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</a>
+			</div>
+
+			<div class="grid-item" data-bg="images/index/services/background2.png">
+				<a href="#">
+					<div class="flip-card">
+						<div class="flip-card-inner">
+							<div class="flip-card-front">
+								<img class="item-image" src="images/index/services/grid_icon_3.png"
+									alt="Image description">
+								<div class="item-content">
+									<span class="item-title">עמילות מכס</span>
+								</div>
+							</div>
+							<div class="flip-card-back">
+								<div class="title">
+									<span>עמילות מכס</span>
+								</div>
+								<div class="content">
+									הובלה יבשתית
+									כספק של שרשרת אספקה מלאה, קבוצת עמית מתמחה גם בשירותי הובלות יבשתיות בארץ מנמלי הים
+									והאוויר ביבוא וביצוא.
+									ספקי ההובלה היבשתית של החברה נבחרו בקפדנות על סמך אמינותם, עמידה בלוח הזמנים, איכות
+									ציוד הובלה ועמידה במחירים תחרותיים.
+								</div>
+
+								<div class="read-more">
+									לשירות
+									<img src="images/icons/yellow-arrow-left-small.png" alt="">
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</a>
+			</div>
+
+			<div class="grid-item" data-bg="images/index/services/background2.png">
+				<a href="#">
+					<div class="flip-card">
+						<div class="flip-card-inner">
+							<div class="flip-card-front">
+								<img class="item-image" src="images/index/services/grid_icon_4.png"
+									alt="Image description">
+								<div class="item-content">
+									<span class="item-title">הובלה יבשתית</span>
+								</div>
+							</div>
+							<div class="flip-card-back">
+								<div class="title">
+									<span> הובלה יבשתית</span>
+								</div>
+								<div class="content">
+									הובלה יבשתית
+									כספק של שרשרת אספקה מלאה, קבוצת עמית מתמחה גם בשירותי הובלות יבשתיות בארץ מנמלי הים
+									והאוויר ביבוא וביצוא.
+									ספקי ההובלה היבשתית של החברה נבחרו בקפדנות על סמך אמינותם, עמידה בלוח הזמנים, איכות
+									ציוד הובלה ועמידה במחירים תחרותיים.
+								</div>
+
+								<div class="read-more">
+									לשירות
+									<img src="images/icons/yellow-arrow-left-small.png" alt="">
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</a>
+			</div>
+
+			<div class="grid-item" data-bg="images/index/services/background2.png">
+				<a href="#">
+					<div class="flip-card">
+						<div class="flip-card-inner">
+							<div class="flip-card-front">
+								<img class="item-image" src="images/index/services/grid_icon_5.png"
+									alt="Image description">
+								<div class="item-content">
+									<span class="item-title">ייעוץ טרום יבוא/יצוא</span>
+								</div>
+							</div>
+							<div class="flip-card-back">
+								<div class="title">
+									<span> ייעוץ טרום יבוא/יצוא</span>
+								</div>
+								<div class="content">
+									הובלה יבשתית
+									כספק של שרשרת אספקה מלאה, קבוצת עמית מתמחה גם בשירותי הובלות יבשתיות בארץ מנמלי הים
+									והאוויר ביבוא וביצוא.
+									ספקי ההובלה היבשתית של החברה נבחרו בקפדנות על סמך אמינותם, עמידה בלוח הזמנים, איכות
+									ציוד הובלה ועמידה במחירים תחרותיים.
+								</div>
+
+								<div class="read-more">
+									לשירות
+									<img src="images/icons/yellow-arrow-left-small.png" alt="">
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</a>
+			</div>
+
+			<div class="grid-item" data-bg="images/index/services/background2.png">
+				<a href="#">
+					<div class="flip-card">
+						<div class="flip-card-inner">
+							<div class="flip-card-front">
+								<img class="item-image" src="images/index/services/grid_icon_6.png"
+									alt="Image description">
+								<div class="item-content">
+									<span class="item-title">תקנים ואישורים</span>
+								</div>
+							</div>
+							<div class="flip-card-back">
+								<div class="title">
+									<span> תקנים ואישורים</span>
+								</div>
+								<div class="content">
+									הובלה יבשתית
+									כספק של שרשרת אספקה מלאה, קבוצת עמית מתמחה גם בשירותי הובלות יבשתיות בארץ מנמלי הים
+									והאוויר ביבוא וביצוא.
+									ספקי ההובלה היבשתית של החברה נבחרו בקפדנות על סמך אמינותם, עמידה בלוח הזמנים, איכות
+									ציוד הובלה ועמידה במחירים תחרותיים.
+								</div>
+
+								<div class="read-more">
+									לשירות
+									<img src="images/icons/yellow-arrow-left-small.png" alt="">
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</a>
+
+			</div>
+
+			<div class="grid-item" data-bg="images/index/services/background2.png">
+				<a href="#">
+					<div class="flip-card">
+						<div class="flip-card-inner">
+							<div class="flip-card-front">
+								<img class="item-image" src="images/index/services/grid_icon_7.png"
+									alt="Image description">
+								<div class="item-content">
+									<span class="item-title">משלוחי צד ג’</span>
+								</div>
+							</div>
+							<div class="flip-card-back">
+								<div class="title">
+									<span> משלוחי צד ג’</span>
+								</div>
+								<div class="content">
+									הובלה יבשתית
+									כספק של שרשרת אספקה מלאה, קבוצת עמית מתמחה גם בשירותי הובלות יבשתיות בארץ מנמלי הים
+									והאוויר ביבוא וביצוא.
+									ספקי ההובלה היבשתית של החברה נבחרו בקפדנות על סמך אמינותם, עמידה בלוח הזמנים, איכות
+									ציוד הובלה ועמידה במחירים תחרותיים.
+								</div>
+
+								<div class="read-more">
+									לשירות
+									<img src="images/icons/yellow-arrow-left-small.png" alt="">
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</a>
+			</div>
+
+			<div class="grid-item" data-bg="images/index/services/background2.png">
+				<a href="#">
+					<div class="flip-card">
+						<div class="flip-card-inner">
+							<div class="flip-card-front">
+								<img class="item-image" src="images/index/services/grid_icon_8.png"
+									alt="Image description">
+								<div class="item-content">
+									<span class="item-title">פרויקטים </span>
+								</div>
+							</div>
+							<div class="flip-card-back">
+								<div class="title">
+									<span> פרויקטים </span>
+								</div>
+								<div class="content">
+									הובלה יבשתית
+									כספק של שרשרת אספקה מלאה, קבוצת עמית מתמחה גם בשירותי הובלות יבשתיות בארץ מנמלי הים
+									והאוויר ביבוא וביצוא.
+									ספקי ההובלה היבשתית של החברה נבחרו בקפדנות על סמך אמינותם, עמידה בלוח הזמנים, איכות
+									ציוד הובלה ועמידה במחירים תחרותיים.
+								</div>
+
+								<div class="read-more">
+									לשירות
+									<img src="images/icons/yellow-arrow-left-small.png" alt="">
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</a>
+			</div>
+
+		</div>
+
+	</section>
+
+	<section class="split-section">
+
+
+		<!-- Right Side -->
+		<div class="right-side">
+			<h1 class="title">
+				עדכונים
+				<span> שוטפים </span>
+			</h1>
+			<article class="article-item">
+				<div class="date">
+					<span class="day">04</span>
+					<span class="month">April</span>
+				</div>
+				<div class="separator"></div>
+				<div class="content">
+					<div class="description">
+						לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג אלית ליבם סולגק.בראיט ולחת צורק מונחף, בגורמי
+						מגמש. תרבנך וסתעד לכנו סתשם השמה </div>
+					<a href="#" class="read-more">קרא עוד
+						<img src="images/icons/yellow-arrow-left-small.png" alt="">
+					</a>
+				</div>
+			</article>
+
+			<article class="article-item">
+				<div class="date">
+					<span class="day">07</span>
+					<span class="month">April</span>
+				</div>
+				<div class="separator"></div>
+				<div class="content">
+					<div class="description">
+						לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג אלית ליבם סולגק.בראיט ולחת צורק מונחף, בגורמי
+						מגמש. תרבנך וסתעד לכנו סתשם השמה
+					</div>
+					<a href="#" class="read-more">קרא עוד
+						<img src="images/icons/yellow-arrow-left-small.png" alt="">
+					</a>
+				</div>
+			</article>
+
+			<article class="article-item">
+				<div class="date">
+					<span class="day">12</span>
+					<span class="month">April</span>
+				</div>
+				<div class="separator"></div>
+				<div class="content">
+					<div class="description">
+						לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג אלית ליבם סולגק.בראיט ולחת צורק מונחף, בגורמי
+						מגמש. תרבנך וסתעד לכנו סתשם השמה
+					</div>
+					<a href="#" class="read-more">קרא עוד
+						<img src="images/icons/yellow-arrow-left-small.png" alt="">
+					</a>
+				</div>
+
+			</article>
+		</div>
+
+		<!-- Left Side -->
+		<div class="left-side">
+			<h1 class="title">
+				כלים
+				<span> ומחשבונים </span>
+			</h1>
+			<div class="tabs">
+				<button class="tab-button active" data-tab="1">שערי מטבע</button>
+				<button class="tab-button" data-tab="2">מחשבוני המרה</button>
+				<button class="tab-button" data-tab="3">מחשבוני עזר</button>
+				<button class="tab-button" data-tab="4">חישוב משקל נפחי</button>
+			</div>
+			<div class="tab-content active" id="tab-1">
+				<!-- Content for Tab 1 -->
+			</div>
+			<div class="tab-content" id="tab-2">
+				<!-- Content for Tab 2 -->
+			</div>
+
+			<div class="tab-content" id="tab-3">
+				<!-- Content for Tab 3 -->
+			</div>
+
+			<div class="tab-content" id="tab-4">
+				<!-- Content for Tab 5 -->
+			</div>
+
+			<div class="spacer"></div>
+
+		</div>
+	</section>
+
+	<section class="carousel">
+
+		<h1 class="title">
+			מגוון
+			<span> סקטורים </span>
+		</h1>
+		<div class="desc">
+			<p>
+				לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג אלית ליבם סולגק. בראיט ולחת צורק מונחף, בגורמי מגמש. תרבנך וסתעד לכנו סתשם השמה - לתכי מורגם בורק? 
+			</p>
+		</div>
+
+		<div class="swiper-container">
+			<div class="carousel">
+				<div class="carousel-items">
+				  <div class="carousel-item">
+					<div class="circle">
+							1	
+					</div>
+					<div class="content" style="background: linear-gradient(rgb(5 36 74 / 90%), rgb(5 36 74 / 90%)), url(images/index/carousel/bg.png);">
+	
+					</div>
+	
+				  </div>
+				  <div class="carousel-item">
+					<div class="circle">
+						2
+					</div>
+					<div class="content" style="background: linear-gradient(rgb(5 36 74 / 90%), rgb(5 36 74 / 90%)), url(images/index/carousel/bg.png);">
+						
+					</div>
+	
+				  </div>
+				  <div class="carousel-item">
+					<div class="circle">
+						3
+					</div>
+					<div class="content" style="background: linear-gradient(rgb(5 36 74 / 90%), rgb(5 36 74 / 90%)), url(images/index/carousel/bg.png);">
+						
+					</div>
+				  </div>
+				  <div class="carousel-item">
+					<div class="circle">
+						4
+					</div>
+					<div class="content" style="background: linear-gradient(rgb(5 36 74 / 90%), rgb(5 36 74 / 90%)), url(images/index/carousel/bg.png);">
+						
+					</div>
+				  </div>
+				  <div class="carousel-item">
+					<div class="circle">
+						5
+					</div>
+					<div class="content" style="background: linear-gradient(rgb(5 36 74 / 90%), rgb(5 36 74 / 90%)), url(images/index/carousel/bg.png);">
+						
+					</div>
+				  </div>
+				  <div class="carousel-item">
+					<div class="circle">
+						6
+					</div>
+					<div class="content" style="background: linear-gradient(rgb(5 36 74 / 90%), rgb(5 36 74 / 90%)), url(images/index/carousel/bg.png);">
+						
+					</div>
+				  </div>
+				  <div class="carousel-item">
+					<div class="circle">
+						7
+					</div>
+					<div class="content" style="background: linear-gradient(rgb(5 36 74 / 90%), rgb(5 36 74 / 90%)), url(images/index/carousel/bg.png);">
+						
+					</div>
+				  </div>
+				  <div class="carousel-item">
+					<div class="circle">
+						8
+					</div>
+					<div class="content" style="background: linear-gradient(rgb(5 36 74 / 90%), rgb(5 36 74 / 90%)), url(images/index/carousel/bg.png);">
+						
+					</div>
+				  </div>
+				  <div class="carousel-item">
+					<div class="circle">
+						9
+					</div>
+					<div class="content" style="background: linear-gradient(rgb(5 36 74 / 90%), rgb(5 36 74 / 90%)), url(images/index/carousel/bg.png);">
+						
+					</div>
+				  </div>
+				</div>
+			  </div>
+			  <div class="navigation">
+				<button id="slide-left">
+					<img src="" alt="">
+				</button>
+				<button id="slide-right">
+					<img src="" alt="">
+				</button>
+			  </div>
+				
+	
+		</div>
+
+	</section>
+
+
+
+	<br><br><br><br><br><br><br><br><br><br>
+
+
 	<script>
 		$(document).ready(function ($) {
-			
-		});
+			console.log('ready');
+
+			const gridItems = document.querySelectorAll('.grid-item');
+			const servicesSection = document.getElementById('services-section');
+
+			gridItems.forEach((item) => {
+				item.addEventListener('mouseenter', function () {
+					const bgImage = this.getAttribute('data-bg');
+					servicesSection.style.backgroundImage = `url(${bgImage})`;
+					servicesSection.style.backgroundSize = 'cover';
+					servicesSection.style.backgroundPosition = 'center';
+				});
+			});
+
+
+			const tabButtons = document.querySelectorAll('.tab-button');
+
+			tabButtons.forEach((button) => {
+				button.addEventListener('click', function (e) {
+					// Remove the active class from all buttons
+					tabButtons.forEach((btn) => {
+						btn.classList.remove('active');
+					});
+
+					// Add the active class to the clicked button
+					e.currentTarget.classList.add('active');
+
+					// Get the data-tab attribute from the clicked button
+					const tabId = e.currentTarget.getAttribute('data-tab');
+
+					// Remove the active class from all content divs
+					document.querySelectorAll('.tab-content').forEach((content) => {
+						content.classList.remove('active');
+					});
+
+					// Add the active class to the appropriate content div
+					const contentDiv = document.getElementById(`tab-${tabId}`);
+					if (contentDiv) {
+						contentDiv.classList.add('active');
+					}
+				});
+			});
+
+
+			const carousel = document.querySelector('.carousel');
+			const carouselItemsContainer = document.querySelector('.carousel-items');
+			let carouselItems = document.querySelectorAll('.carousel-item');
+			let activeIndex = Math.floor(carouselItems.length / 2);  // Start from the middle
+
+			function setActiveSlide() {
+				carouselItems.forEach((item, index) => {
+					item.classList.remove('active');
+				});
+
+				carouselItems[activeIndex].classList.add('active');
+
+				// Re-arrange the HTML elements so that the active one is always in the middle
+				while (activeIndex !== Math.floor(carouselItems.length / 2)) {
+					if (activeIndex > Math.floor(carouselItems.length / 2)) {
+					carouselItemsContainer.appendChild(carouselItems[0]);
+					activeIndex--;
+					} else {
+					carouselItemsContainer.insertBefore(carouselItems[carouselItems.length - 1], carouselItems[0]);
+					activeIndex++;
+					}
+					carouselItems = document.querySelectorAll('.carousel-item');
+				}
+			}
+
+			function rearrangeItemsForward() {
+				carouselItemsContainer.appendChild(carouselItems[0]);
+				updateCarouselItems();
+				activeIndex = (activeIndex - 1 + carouselItems.length) % carouselItems.length;
+				setActiveSlide();
+			}
+
+			function rearrangeItemsBackward() {
+				carouselItemsContainer.insertBefore(carouselItems[carouselItems.length - 1], carouselItems[0]);
+				updateCarouselItems();
+				activeIndex = (activeIndex + 1) % carouselItems.length;
+				setActiveSlide();
+			}
+
+			function updateCarouselItems() {
+				carouselItems = document.querySelectorAll('.carousel-item');
+			}
+
+			document.addEventListener('keydown', function (e) {
+				if (e.key === 'ArrowRight') {
+					rearrangeItemsForward();
+					activeIndex = (activeIndex + 1) % carouselItems.length;
+					setActiveSlide();
+				} else if (e.key === 'ArrowLeft') {
+					rearrangeItemsBackward();
+					activeIndex = (activeIndex - 1 + carouselItems.length) % carouselItems.length;
+					setActiveSlide();
+				}
+			});
+
+			document.getElementById('slide-left').addEventListener('click', function () {
+				rearrangeItemsBackward();
+				activeIndex = (activeIndex - 1 + carouselItems.length) % carouselItems.length;
+				setActiveSlide();
+			});
+
+			document.getElementById('slide-right').addEventListener('click', function () {
+				rearrangeItemsForward();
+				activeIndex = (activeIndex + 1) % carouselItems.length;
+				setActiveSlide();
+			});
+
+			// Initialize the carousel at the middle item
+			function initializeCarousel() {
+				const middleIndex = Math.floor(carouselItems.length / 2);
+				for (let i = 0; i < middleIndex; i++) {
+					rearrangeItemsForward();
+				}
+			}
+
+			initializeCarousel();
+			setActiveSlide();
+			});
 	</script>
 </body>
+
 </html>
