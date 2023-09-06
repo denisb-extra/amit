@@ -40,8 +40,6 @@ header {
                     line-height: 1;
                     transition: color 0.5s;
                     white-space: nowrap;
-
-                   
                     &:hover {
                         color: var(--color-main);
                     }
@@ -108,16 +106,11 @@ header {
             height: 100%;
             background: var(--color-second);
             padding: 20px;
-
-            img {
-                max-height: 100%;
-            }
         }
     }
 
     @media only screen and (max-width : $lw) {
         height: 70px;
-
         .part-left {
             .button {
                 margin-left: 35px;
@@ -127,7 +120,6 @@ header {
             }
         }
     }
-
     @media only screen and (max-width : $tw) {
         height: 50px;
         
@@ -145,7 +137,6 @@ header {
                 }
             }
         }
-
         .menu-cont {
             margin-left: 15px;
             .main-menu {
@@ -158,7 +149,6 @@ header {
             }
         }
     }
-
     @media only screen and (max-width : $mw) {
         position: fixed;
         height: 40px;
@@ -171,11 +161,9 @@ header {
         .menu-cont {
             display: none;
         }
-
         .section-inner {
             padding-left: 0;
         }
-
         .part-left {
             .logo {
                 padding: 8px;
@@ -187,8 +175,6 @@ header {
 
 }
 /* --------------------- /header ---------------------- */
-
-
 
 /* ---------------------- Section hero ---------------------- */
 section.hero {
@@ -260,6 +246,7 @@ section.hero {
             top: 100px;
             right: 18px;
             z-index: 3;
+            width: 37%;
         }
 
         .ship  {
@@ -268,6 +255,7 @@ section.hero {
             right: -200px;
             animation: ship 4s forwards;
             animation-delay: 1s;
+            width: 58.6%;
 
         }
 
@@ -277,6 +265,7 @@ section.hero {
             z-index: 5;
             animation: plane 6s forwards;
             animation-delay: 0s;
+            width: 34.4%;
         }
 
         .plus {
@@ -299,9 +288,7 @@ section.hero {
         .text {
             margin-top: -62px;
             line-height: 1.1;
-            transform: scale(0);
-            animation: grow 0.2s forwards; /* Faster animation */
-            //opacity: 0;
+            opacity: 1;
         }
     }
 
@@ -318,13 +305,32 @@ section.hero {
         margin-left: 0;
         margin-right: auto;
 
-        span {
+        
+        .letter {
+            display: inline-block;
+            transform-origin: bottom;
+            transform: scale(0);
+            direction: ltr;
+            opacity: 0;
+          }
+          .letters {
+            white-space: normal;
+            line-break: auto;
+            direction: ltr;
+            opacity: 0;
+          }
+
+        span.special {
             color: var(--color-main);
         }
     }
 
-    @media only screen and (max-width : $lw) {
-        height: 560px;
+    @media only screen and (max-width : $mw) {
+        .text {
+            margin-left: 19px;
+            margin-right: auto;
+            top: -288px;
+            position: relative;
     }
 
 }
@@ -369,26 +375,7 @@ section.hero {
     }
   }
 
-  @keyframes grow {
-    0% {
-      transform: scale(0);
-    }
-    100% {
-      transform: scale(1);
-    }
-  }
   
-  .animated-text span {
-    display: inline-block;
-    transform: scale(0);
-    animation: grow 0.2s forwards; /* Faster animation */
-  }
-  
-  .animated-text span:nth-child(1) { animation-delay: 0.1s; } /* Faster delay */
-  .animated-text span:nth-child(2) { animation-delay: 0.2s; }
-  .animated-text span:nth-child(3) { animation-delay: 0.3s; }
-  .animated-text span:nth-child(4) { animation-delay: 0.4s; }
-  .animated-text span:nth-child(5) { animation-delay: 0.5s; }
 
 /* ---------------------- Section booking-form ---------------------- */
 section.booking-form {
@@ -656,6 +643,185 @@ section.experience {
           }
         }
       }
+    }
+
+    @media only screen and (max-width : $mw) {
+        .section-inner {
+            display: flex;
+            justify-content: center;
+            flex-wrap: nowrap;
+            max-width: 1920px;
+            padding: 0;
+            flex-direction: column;
+            align-content: center;
+            align-items: center;
+
+            .right-side {
+                width: 100%;
+                padding: 50px;
+            }
+
+            .left-side {
+                width: 100%;
+                padding: 100px 50px;
+                position: relative;
+                align-items: center;
+                justify-content: flex-start;
+                background-color: #F5F5F5;
+                min-height: 1000px;
+
+                
+                .circle {
+                    width: 80vw;
+                    height: 80vw;
+
+                    .main {
+                        width: 30vw;
+                    }
+
+                    .knowledge {
+                        top: -54px;
+
+                        h2 {
+                            font-size: 20px;
+                        }
+                        .window 
+                        {
+                            top: 463px;
+                            position: absolute;
+                            background-color: #05244A;
+                            width: 65vw;
+                            z-index: 1;
+                            height: 230px;
+
+                            .window-inner {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: flex-start;
+                            padding: 15px 33px;
+                            color: #fff;
+                            font-weight: 400;
+                            text-align: right;
+                            top: 0;
+                            }
+                        }
+                    }
+
+
+                    .approach {
+                        flex-direction: column-reverse;
+                        right: -42px;
+                        
+    
+                        h2 {
+                            max-width: 91px;
+                            direction: ltr;
+                            margin-left: 0;
+                            font-size: 20px;
+                            background: whitesmoke;
+                            text-align: center;
+                        }
+
+                        .window 
+                        {
+                            top: 463px;
+                            position: absolute;
+                            background-color: #05244A;
+                            width: 65vw;
+                            z-index: 1;
+                            height: 230px;
+
+                            .window-inner {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: flex-start;
+                            padding: 15px 33px;
+                            color: #fff;
+                            font-weight: 400;
+                            text-align: right;
+                            top: 0;
+                            }
+                        }
+
+                    }
+
+                    .integrity {
+                        flex-direction: column-reverse;
+                        left: -32px;
+                        
+    
+                        h2 {
+                            max-width: 91px;
+                            direction: ltr;
+                            margin-right: 0;
+                            font-size: 20px;
+                            background: whitesmoke;
+                            text-align: center;
+                        }
+
+                        .window 
+                        {
+                            top: 463px;
+                            position: absolute;
+                            background-color: #05244A;
+                            width: 65vw;
+                            z-index: 1;
+                            height: 230px;
+
+                            .window-inner {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: flex-start;
+                            padding: 15px 33px;
+                            color: #fff;
+                            font-weight: 400;
+                            text-align: right;
+                            top: 0;
+                            }
+                        }
+                    }
+
+                    .experience {
+                        h2 {
+                            font-size: 20px;
+                        }
+
+                        .window 
+                        {
+                            top: 120px;
+                            position: absolute;
+                            background-color: #05244A;
+                            width: 65vw;
+                            z-index: 1;
+                            bottom: 0;
+                            height: 230px;
+
+                            .window-inner {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: flex-start;
+                            padding: 15px 33px;
+                            color: #fff;
+                            font-weight: 400;
+                            text-align: right;
+                            top: 0;
+                            }
+                        }
+                    }
+
+
+
+                }
+
+
+
+            }
+
+        }
     }
   }
   
