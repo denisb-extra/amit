@@ -193,16 +193,16 @@ section {
 #sm_menu_ham {
 	position: static;
 	span {
-		background-color: #fff;
+		background-color: var(--color-second);
 		height: 3px;
 	}
 }
 
 .sm_menu_outer {
-	background: #000;
+	background: var(--color-second);
 	overflow-y: hidden;
 	&.slide .mobile_menu .sub-menu {
-		background: #000;;
+		background: var(--color-second);
 		min-height: calc(100vh - 45px);
 		height: auto;
 	}
@@ -237,5 +237,5 @@ section {
 .sm_menu_outer {
     bottom: 0;
     height: calc(100vh - 45px);
-    top: 45px;
+    top: 40px;
 }

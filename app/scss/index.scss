@@ -40,6 +40,8 @@ header {
                     line-height: 1;
                     transition: color 0.5s;
                     white-space: nowrap;
+
+                   
                     &:hover {
                         color: var(--color-main);
                     }
@@ -106,10 +108,87 @@ header {
             height: 100%;
             background: var(--color-second);
             padding: 20px;
+
+            img {
+                max-height: 100%;
+            }
         }
     }
+
+    @media only screen and (max-width : $lw) {
+        height: 70px;
+
+        .part-left {
+            .button {
+                margin-left: 35px;
+                img {
+                    height: 35px;
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width : $tw) {
+        height: 50px;
+        
+        .part-left {
+            .logo {
+                padding: 10px;
+                img {
+                    max-height: 80%;
+                }
+            }
+            .button {
+                margin-left: 15px;
+                img {
+                    height: 30px;
+                }
+            }
+        }
+
+        .menu-cont {
+            margin-left: 15px;
+            .main-menu {
+                li {
+                    margin: 0 5px;
+                    a {
+                        font-size: 17px;
+                    }
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width : $mw) {
+        position: fixed;
+        height: 40px;
+        background: #fff;
+        box-shadow: 0px 2px 15px 0px rgba(50, 50, 50, 0.2);
+        &.home {
+            position: fixed;
+            background: #fff;
+        }
+        .menu-cont {
+            display: none;
+        }
+
+        .section-inner {
+            padding-left: 0;
+        }
+
+        .part-left {
+            .logo {
+                padding: 8px;
+            }
+        }
+        
+    }
+
+
 }
 /* --------------------- /header ---------------------- */
+
+
 
 /* ---------------------- Section hero ---------------------- */
 section.hero {
@@ -242,6 +321,10 @@ section.hero {
         span {
             color: var(--color-main);
         }
+    }
+
+    @media only screen and (max-width : $lw) {
+        height: 560px;
     }
 
 }

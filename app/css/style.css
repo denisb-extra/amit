@@ -55,6 +55,9 @@ body {
   font-family: 'Assistant-Regular';
   font-weight: 400;
   font-size: 18px; }
+  @media only screen and (max-width: 950px) {
+    body {
+      padding-top: 40px; } }
 
 input {
   border: none;
@@ -305,14 +308,14 @@ section {
 #sm_menu_ham {
   position: static; }
   #sm_menu_ham span {
-    background-color: #fff;
+    background-color: var(--color-second);
     height: 3px; }
 
 .sm_menu_outer {
-  background: #000;
+  background: var(--color-second);
   overflow-y: hidden; }
   .sm_menu_outer.slide .mobile_menu .sub-menu {
-    background: #000;
+    background: var(--color-second);
     min-height: calc(100vh - 45px);
     height: auto; }
   .sm_menu_outer .mobile_menu li {
@@ -338,7 +341,7 @@ section {
 .sm_menu_outer {
   bottom: 0;
   height: calc(100vh - 45px);
-  top: 45px; }
+  top: 40px; }
 
 /* ---------------------- header ---------------------- */
 header {
@@ -428,6 +431,47 @@ header {
       height: 100%;
       background: var(--color-second);
       padding: 20px; }
+      header .part-left .logo img {
+        max-height: 100%; }
+  @media only screen and (max-width: 1370px) {
+    header {
+      height: 70px; }
+      header .part-left .button {
+        margin-left: 35px; }
+        header .part-left .button img {
+          height: 35px; } }
+  @media only screen and (max-width: 1200px) {
+    header {
+      height: 50px; }
+      header .part-left .logo {
+        padding: 10px; }
+        header .part-left .logo img {
+          max-height: 80%; }
+      header .part-left .button {
+        margin-left: 15px; }
+        header .part-left .button img {
+          height: 30px; }
+      header .menu-cont {
+        margin-left: 15px; }
+        header .menu-cont .main-menu li {
+          margin: 0 5px; }
+          header .menu-cont .main-menu li a {
+            font-size: 17px; } }
+  @media only screen and (max-width: 950px) {
+    header {
+      position: fixed;
+      height: 40px;
+      background: #fff;
+      box-shadow: 0px 2px 15px 0px rgba(50, 50, 50, 0.2); }
+      header.home {
+        position: fixed;
+        background: #fff; }
+      header .menu-cont {
+        display: none; }
+      header .section-inner {
+        padding-left: 0; }
+      header .part-left .logo {
+        padding: 8px; } }
 
 /* --------------------- /header ---------------------- */
 /* ---------------------- Section hero ---------------------- */
@@ -535,6 +579,9 @@ section.hero {
     margin-right: auto; }
     section.hero .text span {
       color: var(--color-main); }
+  @media only screen and (max-width: 1370px) {
+    section.hero {
+      height: 560px; } }
 
 /* --------------------- /Section hero ---------------------- */
 @-webkit-keyframes sea-right {
