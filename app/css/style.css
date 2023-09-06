@@ -275,6 +275,12 @@ section {
   .decor img {
     max-width: 100%; }
 
+@-webkit-keyframes spin {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
+
 @keyframes spin {
   from {
     transform: rotate(0deg); }
@@ -284,7 +290,8 @@ section {
 .loading:after {
   display: inline-block;
   content: "";
-  animation: spin 1.75s linear infinite;
+  -webkit-animation: spin 1.75s linear infinite;
+          animation: spin 1.75s linear infinite;
   height: 31px;
   width: 31px;
   position: absolute;
@@ -462,14 +469,18 @@ section.hero {
       top: 0;
       right: 0;
       z-index: 1;
-      animation: sea-right 4s forwards;
-      animation-delay: 0s; }
+      -webkit-animation: sea-right 4s forwards;
+              animation: sea-right 4s forwards;
+      -webkit-animation-delay: 0s;
+              animation-delay: 0s; }
     section.hero .hero-animations .sea-left {
       top: 0;
       left: 0;
       z-index: 1;
-      animation: sea-left 4s forwards;
-      animation-delay: 0s; }
+      -webkit-animation: sea-left 4s forwards;
+              animation: sea-left 4s forwards;
+      -webkit-animation-delay: 0s;
+              animation-delay: 0s; }
     section.hero .hero-animations .bg-a {
       bottom: 0;
       right: 145px;
@@ -482,20 +493,26 @@ section.hero {
       z-index: 2;
       top: 342px;
       right: -200px;
-      animation: ship 4s forwards;
-      animation-delay: 1s; }
+      -webkit-animation: ship 4s forwards;
+              animation: ship 4s forwards;
+      -webkit-animation-delay: 1s;
+              animation-delay: 1s; }
     section.hero .hero-animations .plane {
       left: -200px;
       bottom: 50%;
       z-index: 5;
-      animation: plane 6s forwards;
-      animation-delay: 0s; }
+      -webkit-animation: plane 6s forwards;
+              animation: plane 6s forwards;
+      -webkit-animation-delay: 0s;
+              animation-delay: 0s; }
     section.hero .hero-animations .plus {
       z-index: 4;
       right: 13.5%;
       top: 36.7%;
-      animation: plus 1s forwards;
-      animation-delay: 4s;
+      -webkit-animation: plus 1s forwards;
+              animation: plus 1s forwards;
+      -webkit-animation-delay: 4s;
+              animation-delay: 4s;
       opacity: 0; }
   section.hero .section-inner {
     z-index: 10; }
@@ -503,7 +520,8 @@ section.hero {
       margin-top: -62px;
       line-height: 1.1;
       transform: scale(0);
-      animation: grow 0.2s forwards;
+      -webkit-animation: grow 0.2s forwards;
+              animation: grow 0.2s forwards;
       /* Faster animation */ }
   section.hero .text {
     font-family: 'Raleway-Bold';
@@ -519,12 +537,27 @@ section.hero {
       color: var(--color-main); }
 
 /* --------------------- /Section hero ---------------------- */
+@-webkit-keyframes sea-right {
+  0% {
+    right: -200px;
+    opacity: 1; }
+  100% {
+    right: 0;
+    opacity: 1; } }
 @keyframes sea-right {
   0% {
     right: -200px;
     opacity: 1; }
   100% {
     right: 0;
+    opacity: 1; } }
+
+@-webkit-keyframes sea-left {
+  0% {
+    left: -200px;
+    opacity: 1; }
+  100% {
+    left: 0;
     opacity: 1; } }
 
 @keyframes sea-left {
@@ -535,6 +568,14 @@ section.hero {
     left: 0;
     opacity: 1; } }
 
+@-webkit-keyframes ship {
+  0% {
+    right: -200px;
+    opacity: 1; }
+  100% {
+    right: 0;
+    opacity: 1; } }
+
 @keyframes ship {
   0% {
     right: -200px;
@@ -542,6 +583,14 @@ section.hero {
   100% {
     right: 0;
     opacity: 1; } }
+
+@-webkit-keyframes plus {
+  0% {
+    opacity: 0;
+    transform: scale(1.25); }
+  100% {
+    opacity: 1;
+    transform: scale(1); } }
 
 @keyframes plus {
   0% {
@@ -551,6 +600,14 @@ section.hero {
     opacity: 1;
     transform: scale(1); } }
 
+@-webkit-keyframes plane {
+  0% {
+    left: -200px;
+    bottom: 500px; }
+  100% {
+    bottom: 0;
+    left: 18.5%; } }
+
 @keyframes plane {
   0% {
     left: -200px;
@@ -558,6 +615,16 @@ section.hero {
   100% {
     bottom: 0;
     left: 18.5%; } }
+
+@-webkit-keyframes text {
+  0% {
+    left: -200px;
+    bottom: 500px;
+    opacity: 0; }
+  100% {
+    bottom: 0;
+    left: 18.5%;
+    opacity: 1; } }
 
 @keyframes text {
   0% {
@@ -569,6 +636,12 @@ section.hero {
     left: 18.5%;
     opacity: 1; } }
 
+@-webkit-keyframes grow {
+  0% {
+    transform: scale(0); }
+  100% {
+    transform: scale(1); } }
+
 @keyframes grow {
   0% {
     transform: scale(0); }
@@ -578,24 +651,30 @@ section.hero {
 .animated-text span {
   display: inline-block;
   transform: scale(0);
-  animation: grow 0.2s forwards;
+  -webkit-animation: grow 0.2s forwards;
+          animation: grow 0.2s forwards;
   /* Faster animation */ }
 
 .animated-text span:nth-child(1) {
-  animation-delay: 0.1s; }
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s; }
 
 /* Faster delay */
 .animated-text span:nth-child(2) {
-  animation-delay: 0.2s; }
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s; }
 
 .animated-text span:nth-child(3) {
-  animation-delay: 0.3s; }
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s; }
 
 .animated-text span:nth-child(4) {
-  animation-delay: 0.4s; }
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s; }
 
 .animated-text span:nth-child(5) {
-  animation-delay: 0.5s; }
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s; }
 
 /* ---------------------- Section booking-form ---------------------- */
 section.booking-form {
