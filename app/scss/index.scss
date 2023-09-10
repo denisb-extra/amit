@@ -178,7 +178,8 @@ header {
 
 /* ---------------------- Section hero ---------------------- */
 section.hero {
-    height: 860px;
+    height: 45vw;
+    max-height: 864px;
     position: relative;
     overflow: visible;
     display: flex;
@@ -211,7 +212,7 @@ section.hero {
 
     }
 
-    .hero-animations{
+    .hero-animations {
         position: absolute;
         width: 100%;
         height: 100%;
@@ -230,6 +231,7 @@ section.hero {
             z-index: 1;
             animation: sea-right 4s forwards;
             animation-delay: 0s;
+            height: 100%;
         }
 
         .sea-left {
@@ -238,24 +240,27 @@ section.hero {
             z-index: 1;
             animation: sea-left 4s forwards;
             animation-delay: 0s;
+            height: 100%;
         }
 
         .bg-a {
             top: 100px;
-            right:  128px;
+            right:  6%;
             z-index: 1;
+            max-width: 48%;
         }
 
         .bg-a-long {
             top: 100px;
-            right: 0%;
+            right: -1%;
             z-index: 3;
+            width: 35.5%;
         }
 
 
         .ship  {
             z-index: 2;
-            top: 342px;
+            top: 39%;
             right: -200px;
             animation: ship 4s forwards;
             animation-delay: 1s;
@@ -274,7 +279,7 @@ section.hero {
 
         .plus {
             z-index: 4;
-            right: 270px;
+            right: 13%;
             top: 36.7%;
             animation: plus 1s forwards;
             animation-delay: 4s;
@@ -326,156 +331,50 @@ section.hero {
 
 
     @media only screen and (max-width : $lw) {
-            
-        .bg-a {
-            top: 70px;
-            right:  128px;
-            z-index: 1;
-            margin-right: -50px ;
-            width: 80
+        .text {
+            font-size: 70px;
         }
-
-        .bg-a-long {
-            top: 70px;
-            right: 0%;
-            z-index: 3;
-            margin-right: -50px ;
-
-        }
-
-        .ship  {
-            z-index: 2;
-            top: 342px;
-            right: -200px;
-            animation: ship 4s forwards;
-            animation-delay: 1s;
-            width: 65%;
-
-        }
-
-        .plane {
-            left: -200px;
-            bottom: 50%;
-            z-index: 5;
-            animation: plane 6s forwards;
-            animation-delay: 0s;
-            width: 34.4%;
-        }
-
-        .plus {
-            z-index: 4;
-            top: 36.7%;
-            animation: plus 1s forwards;
-            animation-delay: 4s;
-            opacity: 0;
+        .hero-animations {
+            .bg-a {
+                top: 70px;
+            }
+            .bg-a-long {
+                top: 70px;
+            }
         }
 
 
     }
 
     @media only screen and (max-width : $tw) {
-        
-        .bg-a {
-            top: 50px;
-            right:  128px;
-            z-index: 1;
-            margin-right: -50px ;
-            width: 80
-        }
-
-        .bg-a-long {
-            top: 50px;
-            right: 0%;
-            z-index: 3;
-            margin-right: -50px ;
-
-        }
-    }
-
-    @media only screen and (max-width : 600px) {
-        
         .text {
-            font-size: 40px;
-            margin-left: -27px;
-            margin-right: auto;
-            top: -221px;
-            position: relative;
+            font-size: 60px;
         }
-
-    }
-
-    @media only screen and (max-width : $mw) {
-        
-        .text {
-            font-size: 2.5em;
-            line-height: 1.2;
-            margin-left: 0;
-            margin-right: 0;
-            top: -221px;
-            position: relative;
-            width: auto;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            left: 0;
-            right: 0;
-
-            .letters {
-                white-space: nowrap;
-            }
-        }
-
         .hero-animations {
             .bg-a {
-                bottom: 0;
-                right: 43px;
-                z-index: 1;
-                width: 400px;
-                top: auto;
+                top: 50px;
             }
-    
             .bg-a-long {
-                top: auto;
-                right: -64px;
-                z-index: 3;
-                margin-right: 0;
-                width: 294px;
-                bottom: -142px;
+                top: 50px;
             }
+        }
+  
+    }
 
+
+
+    @media only screen and (max-width : $mw) {
+        .text {
+            font-size: 25px;
+        }
+        .hero-animations {
             .ship {
-                z-index: 2;
-                top: 72%;
-                right: -200px;
-                animation: ship 4s forwards;
-                animation-delay: 1s;
-                width: 99%;
-                bottom: auto;
+                top: 57%;
             }
-
-            .plane {
-                left: -200px;
-                bottom: auto;
-                z-index: 5;
-                animation: plane 6s forwards;
-                animation-delay: 0s;
-                top: 280px;
-                width: 70%;
-            }
-
             .plus {
-                z-index: 4;
-                right: 60px;
-                top: auto;
-                animation: plus 1s forwards;
-                animation-delay: 4s;
-                opacity: 0;
-                width: 10vw;
-                bottom: 206px;
-                max-width: 150px;
+                right: 13%;
+                top: 54.7%;
             }
-            
         }
 
 
@@ -511,18 +410,6 @@ section.hero {
     100% {  bottom: 0; left: 18.5%;}
 }
 
-@keyframes text {
-    0% {
-      left: -200px;
-      bottom: 500px;
-      opacity: 0;
-    }
-    100% {
-      bottom: 0;
-      left: 18.5%;
-      opacity: 1;
-    }
-  }
 
   
 
