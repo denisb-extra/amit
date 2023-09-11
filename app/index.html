@@ -869,7 +869,7 @@
 					<div class="subscribe-input">
 						<input type="text" placeholder="הזן כתובת אימייל:" style="flex: 1" />
 						<!-- You can replace the "fa-envelope" with the icon you want to use -->
-						<button type="submit" style="margin-left: 10px">אני בפנים <img
+						<button type="submit">אני בפנים <img
 								src="images/index/subscribe/arrow_white.png" alt="" /></button>
 					</div>
 					<div class="agreement">
@@ -1151,6 +1151,70 @@
 
 
 		});
+
+		$(document).ready(function() {
+    // Store original positions
+    var originalPositions = [];
+
+    // Check if mobile
+    function isMobile() {
+        return window.innerWidth <= 800;
+    }
+
+    // Move the elements on mobile
+    function moveOnMobile() {
+        if(isMobile()) {
+            $('section.experience .section-inner .left-side .circle .item').each(function(index) {
+                var $window = $(this).find('.window');
+                if($window.length > 0) {
+                    originalPositions.push({item: this, window: $window.detach()});
+                }
+
+                // Assign a data attribute for identification
+                $(this).attr('data-window-index', index);
+                $window.attr('data-window-index', index);
+            });
+
+            $('section.experience .section-inner .left-side .circle').append(originalPositions.map(pos => pos.window));
+        } else {
+            // Move them back if not on mobile and if they were moved
+            originalPositions.forEach(pos => {
+                $(pos.item).append(pos.window);
+            });
+            originalPositions = []; // Clear the positions
+        }
+    }
+
+    // Initial move
+    moveOnMobile();
+
+    // Handle window resize
+    $(window).resize(function() {
+        moveOnMobile();
+    });
+
+    // Hide all the .window elements by default
+    $('.window').hide();
+
+    // On hover or click of any .item, show its corresponding .window
+    $('.item').on('mouseenter click', function() {
+        // First, hide all the windows
+        $('.window').hide();
+
+        // Find the index of the hovered/clicked .item
+        var index = $(this).attr('data-window-index');
+
+        // Show the corresponding .window
+        $('.window[data-window-index="' + index + '"]').css('display', 'flex');
+    });
+
+    // If you want to hide the window when the mouse leaves the item
+    $('.item').mouseleave(function() {
+        $('.window').hide();
+    });
+});
+
+		
 	</script>
 </body>
 
