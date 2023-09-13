@@ -745,7 +745,10 @@ section.experience {
     flex-wrap: nowrap;
     max-width: 1920px;
     padding: 0;
-    min-height: 70vw; }
+    min-height: 880px; }
+    @media only screen and (max-width: 1370px) {
+      section.experience .section-inner {
+        min-height: 800px; } }
     section.experience .section-inner .right-side,
     section.experience .section-inner .left-side {
       width: 40%;
@@ -833,11 +836,13 @@ section.experience {
       margin-top: -125px;
       min-height: 500px; }
     section.experience .section-inner .left-side {
+      display: flex;
+      justify-content: center;
       position: relative;
       align-items: center;
       background-color: #F5F5F5;
       width: 60%;
-      padding-top: 300px; }
+      min-height: 50vw; }
       section.experience .section-inner .left-side .circle {
         position: relative;
         border-radius: 210px;
@@ -849,8 +854,7 @@ section.experience {
         display: flex;
         align-content: center;
         align-items: center;
-        justify-content: center;
-        margin-top: 20px; }
+        justify-content: center; }
         section.experience .section-inner .left-side .circle img {
           margin: 0; }
         section.experience .section-inner .left-side .circle .main {
@@ -883,6 +887,9 @@ section.experience {
           top: -61px; }
           section.experience .section-inner .left-side .circle .knowledge .window {
             top: -210px; }
+          @media only screen and (max-width: 1200px) {
+            section.experience .section-inner .left-side .circle .knowledge .window {
+              top: -235px; } }
         section.experience .section-inner .left-side .circle .approach {
           flex-direction: row;
           right: -135px; }
@@ -903,9 +910,13 @@ section.experience {
             left: -50px; }
         section.experience .section-inner .left-side .circle .experience {
           flex-direction: column-reverse;
-          bottom: -64px; }
+          bottom: -64px;
+          z-index: 100; }
           section.experience .section-inner .left-side .circle .experience .window {
             bottom: -210px; }
+          @media only screen and (max-width: 1200px) {
+            section.experience .section-inner .left-side .circle .experience .window {
+              bottom: -235px; } }
         section.experience .section-inner .left-side .circle .icon {
           display: flex;
           width: 55px;
@@ -1090,7 +1101,13 @@ section.services {
     section.services .grid-container {
       grid-template-columns: repeat(2, 1fr); }
       section.services .grid-container .grid-item .flip-card .flip-card-front .item-content span {
-        font-size: 24px; } }
+        font-size: 24px; }
+      section.services .grid-container .grid-item .flip-card .flip-card-back .title {
+        font-size: 22px; }
+      section.services .grid-container .grid-item .flip-card .flip-card-back .content {
+        font-size: 14px; }
+      section.services .grid-container .grid-item .flip-card .flip-card-back .read-more {
+        font-size: 16px; } }
 
 /* --------------------- /Section class ---------------------- */
 /* ---------------------- Section class ---------------------- */
@@ -1699,7 +1716,7 @@ section.about {
   section.about .section-inner .title {
     color: var(--color-main); }
   section.about .section-inner .content {
-    padding: 0 10vw; }
+    /* padding: 0 10vw; */ }
   section.about .about-image {
     padding-top: 50px; }
     section.about .about-image img {
@@ -2163,11 +2180,18 @@ section.blog.share-knowledge .section-inner .main-content {
 section.about.experience .section-inner .right-side {
   min-height: auto; }
   section.about.experience .section-inner .right-side .vision {
-    bottom: -140px; }
+    bottom: 0; }
+    @media only screen and (max-width: 1950px) {
+      section.about.experience .section-inner .right-side .vision .desc {
+        font-size: 1.4vw; } }
+    @media only screen and (max-width: 950px) {
+      section.about.experience .section-inner .right-side .vision {
+        bottom: -120px; }
+        section.about.experience .section-inner .right-side .vision .desc {
+          font-size: 16px; } }
 
 section.about.experience .section-inner .left-side {
-  width: 100%;
-  padding: 160px 20px; }
+  width: 100%; }
   section.about.experience .section-inner .left-side .content {
     padding: 0; }
 
@@ -2488,6 +2512,249 @@ section.insurance.articles .section-inner {
     justify-content: space-between; }
 
 /* --------------------- /Section insurance.articles ---------------------- */
+/* ---------------------- Section jobs.intro ---------------------- */
+section.jobs.intro {
+  background-image: url(../images/jobs/bg.png);
+  background-repeat: no-repeat;
+  background-position: top center;
+  padding-bottom: 0; }
+  section.jobs.intro .section-inner .title {
+    padding-bottom: 20px; }
+  section.jobs.intro .section-inner .desc {
+    font-family: Assistant-Regular;
+    font-size: 18px;
+    padding: 0 17vw; }
+    section.jobs.intro .section-inner .desc span {
+      font-family: Assistant-Bold; }
+  section.jobs.intro .section-inner .sub-title {
+    padding: 50px 0;
+    font-family: Assistant-Bold;
+    font-size: 32px; }
+  section.jobs.intro .section-inner .why-with-us {
+    display: flex;
+    flex-direction: row; }
+    @media only screen and (max-width: 950px) {
+      section.jobs.intro .section-inner .why-with-us {
+        flex-direction: column; } }
+    section.jobs.intro .section-inner .why-with-us .item {
+      display: flex;
+      flex-direction: row;
+      padding-left: 20px;
+      border-left: 1px solid rgba(0, 0, 0, 0.493); }
+      @media only screen and (max-width: 950px) {
+        section.jobs.intro .section-inner .why-with-us .item {
+          border-left: none;
+          padding: 20px 0px;
+          border-bottom: 1px solid rgba(0, 0, 0, 0.493); } }
+      section.jobs.intro .section-inner .why-with-us .item .img {
+        padding: 0 20px; }
+      section.jobs.intro .section-inner .why-with-us .item .title {
+        font-family: Assistant-Bold;
+        font-size: 32px;
+        text-align: right;
+        padding-bottom: 0;
+        color: var(--color-black); }
+      section.jobs.intro .section-inner .why-with-us .item .text {
+        font-family: Assistant-Regular;
+        font-size: 18px;
+        padding-top: 20px;
+        line-height: 1.5;
+        text-align: right;
+        padding-top: 0;
+        color: var(--color-black); }
+    section.jobs.intro .section-inner .why-with-us .item:last-child {
+      border-left: none; }
+  section.jobs.intro .section-inner .content-img {
+    padding-top: 50px;
+    display: flex;
+    justify-content: center; }
+    section.jobs.intro .section-inner .content-img img {
+      width: 100%;
+      max-width: 100%; }
+
+/* --------------------- /Section jobs.intro ---------------------- */
+/* ---------------------- Section open-jobs -
+--------------------- */
+section.open-jobs {
+  overflow: visible;
+  background-color: #F5F5F5; }
+  section.open-jobs .section-inner {
+    padding-top: 70px; }
+    section.open-jobs .section-inner .title-container {
+      background-color: var(--color-main);
+      position: absolute;
+      padding: 50px;
+      top: -180px;
+      z-index: 100; }
+      @media only screen and (max-width: 950px) {
+        section.open-jobs .section-inner .title-container {
+          position: relative;
+          top: -40px; } }
+      section.open-jobs .section-inner .title-container .open-title {
+        font-family: 'Almoni-Tzar-Bold';
+        font-size: 52px; }
+        section.open-jobs .section-inner .title-container .open-title span {
+          color: white; }
+        @media only screen and (max-width: 950px) {
+          section.open-jobs .section-inner .title-container .open-title {
+            font-size: 8vw; } }
+      section.open-jobs .section-inner .title-container .open-desc {
+        font-family: Assistant-Bold;
+        font-size: 32px; }
+        @media only screen and (max-width: 950px) {
+          section.open-jobs .section-inner .title-container .open-desc {
+            font-size: 5vw; } }
+    section.open-jobs .section-inner .jobs-container .job {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      justify-content: space-between; }
+      @media only screen and (max-width: 950px) {
+        section.open-jobs .section-inner .jobs-container .job {
+          flex-wrap: wrap; } }
+      section.open-jobs .section-inner .jobs-container .job .job-item {
+        width: 23vw;
+        max-width: 365px; }
+        @media only screen and (max-width: 950px) {
+          section.open-jobs .section-inner .jobs-container .job .job-item {
+            width: 49%;
+            max-width: 100%; } }
+        section.open-jobs .section-inner .jobs-container .job .job-item .job-img img {
+          width: 100%; }
+        section.open-jobs .section-inner .jobs-container .job .job-item .job-title {
+          font-family: Assistant-Bold;
+          font-size: 32px; }
+        section.open-jobs .section-inner .jobs-container .job .job-item .job-desc {
+          font-family: Assistant-Regular;
+          font-size: 18px; }
+        section.open-jobs .section-inner .jobs-container .job .job-item .job-btn {
+          font-family: Assistant-Bold;
+          padding-top: 20px; }
+      @media only screen and (max-width: 950px) {
+        section.open-jobs .section-inner .jobs-container .job .job-item {
+          margin-top: 20px; }
+          section.open-jobs .section-inner .jobs-container .job .job-item .job-title {
+            font-family: Assistant-Bold;
+            font-size: 24px; }
+          section.open-jobs .section-inner .jobs-container .job .job-item .job-desc {
+            font-family: Assistant-Regular;
+            font-size: 16px; }
+          section.open-jobs .section-inner .jobs-container .job .job-item .job-btn {
+            font-family: Assistant-Bold;
+            padding-top: 16px; } }
+
+/* --------------------- /Section open-jobs ---------------------- */
+/* ---------------------- Section satisfaction ---------------------- */
+section.satisfaction .section-inner {
+  display: flex; }
+  section.satisfaction .section-inner .satisfaction-right {
+    width: 50%; }
+    section.satisfaction .section-inner .satisfaction-right .satisfaction-title {
+      font-family: Assistant-Bold;
+      font-size: 32px;
+      padding-bottom: 20px;
+      padding-top: 20px; }
+    section.satisfaction .section-inner .satisfaction-right .satisfaction-desc {
+      font-family: Assistant-Regular;
+      font-size: 18px;
+      line-height: 1.5;
+      padding-left: 100px; }
+  section.satisfaction .section-inner .satisfaction-left {
+    width: 50%; }
+
+@media only screen and (max-width: 950px) {
+  section.satisfaction .section-inner {
+    flex-direction: column; }
+    section.satisfaction .section-inner .satisfaction-right {
+      width: 100%; }
+      section.satisfaction .section-inner .satisfaction-right .img-title {
+        display: flex;
+        justify-content: center; }
+      section.satisfaction .section-inner .satisfaction-right .satisfaction-title {
+        display: flex;
+        justify-content: center;
+        font-size: 24px; }
+      section.satisfaction .section-inner .satisfaction-right .satisfaction-desc {
+        display: flex;
+        justify-content: center;
+        padding: 0 20px;
+        padding-bottom: 40px; } }
+
+/* --------------------- /Section satisfaction ---------------------- */
+/* ---------------------- Section customer-jobs ---------------------- */
+section.customer-jobs .section-inner {
+  display: flex;
+  flex-direction: column; }
+  section.customer-jobs .section-inner .title {
+    padding-bottom: 80px; }
+  section.customer-jobs .section-inner .customer-jobs-list-item {
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px; }
+    section.customer-jobs .section-inner .customer-jobs-list-item .job-img img {
+      max-width: 180px;
+      height: 100%;
+      -o-object-fit: cover;
+         object-fit: cover; }
+    section.customer-jobs .section-inner .customer-jobs-list-item .job-list-content {
+      display: flex;
+      flex-direction: row;
+      margin-right: 40px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.493);
+      width: 100%;
+      justify-content: space-between; }
+      section.customer-jobs .section-inner .customer-jobs-list-item .job-list-content .inside-content .job-list-title {
+        font-family: Assistant-Bold;
+        font-size: 32px;
+        padding-bottom: 20px; }
+      section.customer-jobs .section-inner .customer-jobs-list-item .job-list-content .inside-content .job-list-desc {
+        font-family: Assistant-Regular;
+        font-size: 18px; }
+      section.customer-jobs .section-inner .customer-jobs-list-item .job-list-content .job-list-btn {
+        display: flex;
+        justify-content: center;
+        padding-top: 10px;
+        font-family: Assistant-Bold;
+        font-size: 18px; }
+
+@media only screen and (max-width: 950px) {
+  section.customer-jobs .section-inner .title {
+    padding-bottom: 30px; }
+  section.customer-jobs .section-inner .customer-jobs-list-item {
+    flex-direction: column;
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.493);
+    margin-top: 50px; }
+    section.customer-jobs .section-inner .customer-jobs-list-item .job-img {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px; }
+      section.customer-jobs .section-inner .customer-jobs-list-item .job-img img {
+        max-width: 300px;
+        height: 100%;
+        -o-object-fit: cover;
+           object-fit: cover; }
+    section.customer-jobs .section-inner .customer-jobs-list-item .job-list-title {
+      display: flex;
+      justify-content: center; }
+    section.customer-jobs .section-inner .customer-jobs-list-item .job-list-content {
+      display: flex;
+      flex-direction: column;
+      margin-right: 0px;
+      border-bottom: none; }
+      section.customer-jobs .section-inner .customer-jobs-list-item .job-list-content .inside-content {
+        padding: 0 20px; }
+        section.customer-jobs .section-inner .customer-jobs-list-item .job-list-content .inside-content .job-list-desc {
+          display: flex;
+          justify-content: center; }
+      section.customer-jobs .section-inner .customer-jobs-list-item .job-list-content .job-list-btn {
+        display: flex;
+        justify-content: center;
+        padding-top: 10px;
+        font-family: Assistant-Bold;
+        font-size: 18px; } }
+
+/* --------------------- /Section customer-jobs ---------------------- */
 .alignnone, .aligncenter, .alignright, .alignleft {
   max-width: 50%; }
 

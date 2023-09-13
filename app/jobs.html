@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+	<title>חברה | תיאור</title>
+
+	<script src="js/jquery-3.2.0.min.js"></script>
+	<script src="js/main.js"></script>
+
+	<link rel="stylesheet" href="plugins/swiper/swiper.css" />
+	<script src="plugins/swiper/swiper.js"></script>
+
+	<script src="plugins/slider-custom/slider.js"></script>
+
+	<link rel="stylesheet" href="plugins/fancybox/jquery.fancybox.css" />
+	<script src="plugins/fancybox/jquery.fancybox.js"></script>
+
+	<script src="plugins/scrollreveal/scrollreveal.js"></script>
+
+	<script src="plugins/mmenu/jquery-simple-mobilemenu.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+
+	<link rel="stylesheet" href="plugins/mmenu/styles/jquery-simple-mobilemenu-slide.css" />
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css" />
+
+	<!-- JavaScript -->
+	<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+
+	<link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+	<header class="home page">
+		<div class="section-inner">
+			<div class="menu-cont">
+				<ul class="main-menu">
+					<li class="current_page_item"><a href="">בית</a></li>
+					<li class=""><a href="">אודות</a></li>
+					<li class="menu-item-has-children">
+						<a href="">שירותים</a>
+						<ul class="sub-menu">
+							<li class="menu-item"><a href="#">מימוש זכויות רפואיות</a></li>
+							<li class="menu-item"><a href="#">פתרונות פיננסיים</a></li>
+							<li class="menu-item menu-item-has-children">
+								<a href="#">ביטוח אמבולטורי</a>
+								<ul class="sub-menu">
+									<li class="menu-item"><a href="#">מימוש זכויות רפואיות</a></li>
+									<li class="menu-item menu-item menu-item-has-children">
+										<a href="#">פתרונות פיננסיים</a>
+										<ul class="sub-menu">
+											<li class="menu-item"><a href="#">מימוש זכויות רפואיות</a></li>
+											<li class="menu-item"><a href="#">פתרונות פיננסיים</a></li>
+											<li class="menu-item"><a href="#">ביטוח אמבולטורי</a></li>
+										</ul>
+									</li>
+									<li class="menu-item"><a href="#">ביטוח אמבולטורי</a></li>
+								</ul>
+							</li>
+							<li class="menu-item"><a href="#">פתרונות פיננסיים</a></li>
+							<li class="menu-item"><a href="#">פתרונות פיננסיים</a></li>
+						</ul>
+					</li>
+					<li><a href="">פתרונות מיוחדים ומומחיות</a></li>
+					<li><a href="">סקטורים</a></li>
+					<li><a href="">טוב לדעת</a></li>
+					<li><a href="">דברו איתנו</a></li>
+					<li><a href="">דרושים</a></li>
+				</ul>
+			</div>
+
+			<div class="mobile-menu-cont mobile_menu">
+				<ul class="mobile_menu">
+					<li class="current_page_item"><a href="">בית</a></li>
+					<li class=""><a href="">אודות</a></li>
+					<li class="menu-item-has-children">
+						<a href="">שירותים</a>
+						<ul class="sub-menu">
+							<li class="menu-item"><a href="#">מימוש זכויות רפואיות</a></li>
+							<li class="menu-item"><a href="#">פתרונות פיננסיים</a></li>
+							<li class="menu-item menu-item-has-children">
+								<a href="#">ביטוח אמבולטורי</a>
+								<ul class="sub-menu">
+									<li class="menu-item"><a href="#">מימוש זכויות רפואיות</a></li>
+									<li class="menu-item menu-item menu-item-has-children">
+										<a href="#">פתרונות פיננסיים</a>
+										<ul class="sub-menu">
+											<li class="menu-item"><a href="#">מימוש זכויות רפואיות</a></li>
+											<li class="menu-item"><a href="#">פתרונות פיננסיים</a></li>
+											<li class="menu-item"><a href="#">ביטוח אמבולטורי</a></li>
+										</ul>
+									</li>
+									<li class="menu-item"><a href="#">ביטוח אמבולטורי</a></li>
+								</ul>
+							</li>
+							<li class="menu-item"><a href="#">פתרונות פיננסיים</a></li>
+							<li class="menu-item"><a href="#">פתרונות פיננסיים</a></li>
+						</ul>
+					</li>
+					<li><a href="">פתרונות מיוחדים ומומחיות</a></li>
+					<li><a href="">סקטורים</a></li>
+					<li><a href="">טוב לדעת</a></li>
+					<li><a href="">דברו איתנו</a></li>
+					<li><a href="">דרושים</a></li>
+				</ul>
+			</div>
+			<div class="ham-button"></div>
+
+			<div class="part-left">
+				<a href="#" class="button">
+					<img src="images/icons/avatar.svg" />
+				</a>
+				<a href="#" class="logo">
+					<img src="images/index/logo.png" />
+				</a>
+			</div>
+		</div>
+	</header>
+
+	<section class="page-title">
+		<div class="title centered">
+			<h1>   דרושים </h1>
+		</div>
+		<img class="first-plus" src="images/icons/plus-blue-medium.png" alt="">
+		<img class="second-plus" src="images/icons/plus-blue-medium.png" alt="">
+		<div class="breadcrumbs"></div>
+	</section>
+
+
+    <section class="jobs intro">
+        <div class="section-inner">
+            <div class="title">
+                <img src="images/jobs/title.png" alt="">
+            </div>
+
+            <div class="desc">
+                עם ותק ונסיון של יותר מ-70 שנה, חברתנו מעניקה מענה מקצועי, אמין ויסודי בכל שלבי שרשרת האספקה, יחד עם שירותיות גבוהה, חדשנות ומסירות, כשלעינינו מטרה אחת נעלה - 
+                <span>
+                    לבצע את העבודה בצורה הטובה והמדויקת ביותר.
+                </span>
+            </div>
+
+            <div class="sub-title centered">
+                למה כדאי לעבוד איתנו?
+            </div>
+
+            <div class="why-with-us">
+                <div class="item">
+                    <div class="img">
+                        <img src="images/jobs/whyus1.png" alt="">
+                    </div>
+                    <div class="content">
+                        <div class="title">
+                            ידע עצום
+                        </div>
+                        <div class="text">
+                            עם עובדים בעלי עשרות שנות ניסיון, עמית היא בית הספר של התעשייה
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="img">
+                        <img src="images/jobs/whyus2.png" alt="">
+                    </div>
+                    <div class="content">
+                        <div class="title">
+                            הון אנושי
+                        </div>
+                        <div class="text">
+                            עם עובדים בעלי עשרות שנות ניסיון, עמית היא בית הספר של התעשייה
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="img">
+                        <img src="images/jobs/whyus3.png" alt="">
+                    </div>
+                    <div class="content">
+                        <div class="title">
+                            משפחתיות                        </div>
+                        <div class="text">
+                            עם עובדים בעלי עשרות שנות ניסיון, עמית היא בית הספר של התעשייה
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-img">
+                <img src="images/jobs/content.png" alt="">
+            </div>
+
+    </div>
+    </section>
+
+    <section class="open-jobs">
+        <div class="section-inner">
+            <div class="title-container">
+                <div class="open-title">
+                    משרות פתוחות 
+                    <span>
+                        בעמית
+                    </span>
+                </div>
+                <div class="open-desc">
+                    סתם שתדעו, כל המוכשרים אצלנו (:
+                </div>
+            </div>
+    
+            <div class="jobs-container">
+                <div class="job">
+                    <div class="job-item">
+                        <div class="job-img">
+                            <img src="images/jobs/job-img-1.png" alt="">
+                        </div>
+                        <div class="job-title centered">
+                            מתאם לוגיסטי
+                        </div>
+                        <div class="job-desc centered">
+                            פיקוח ובקרה שוטפים מול מסופי המטען האוויריים
+                        </div> 
+    
+                        <div class="job-btn centered">
+                            <a href="#" class="button">
+                                <span>גלה עוד </span>
+                                <img src="images/icons/yellow-arrow-left-small.png" alt="">
+                            </a>
+                        </div>
+                           
+                    </div>
+                    <div class="job-item">
+                        <div class="job-img">
+                            <img src="images/jobs/job-img-2.png" alt="">
+                        </div>
+                        <div class="job-title centered">
+                            נהג/ת משאית
+                        </div>
+                        <div class="job-desc centered">
+                            פיקוח ובקרה שוטפים מול מסופי המטען האוויריים
+                        </div> 
+    
+                        <div class="job-btn centered">
+                            <a href="#" class="button">
+                                <span>גלה עוד </span>
+                                <img src="images/icons/yellow-arrow-left-small.png" alt="">
+                            </a>
+                        </div>
+                           
+                    </div>
+                    <div class="job-item">
+
+                        <div class="job-img">
+                            <img src="images/jobs/job-img-3.png" alt="">
+                        </div>
+                        
+                        <div class="job-title centered">
+                            מחסנאי/ת
+                        </div>
+                        <div class="job-desc centered">
+                            פיקוח ובקרה שוטפים מול מסופי המטען האוויריים
+                        </div> 
+    
+                        <div class="job-btn centered">
+                            <a href="#" class="button">
+                                <span>גלה עוד </span>
+                                <img src="images/icons/yellow-arrow-left-small.png" alt="">
+                            </a>
+                        </div>
+                           
+                    </div>
+                    <div class="job-item">
+                        <div class="job-img">
+                            <img src="images/jobs/job-img-4.png" alt="">
+                        </div>
+                        <div class="job-title centered">
+                            נציג/ת שירו”ל                        </div>
+                        <div class="job-desc centered">
+                            פיקוח ובקרה שוטפים מול מסופי המטען האוויריים
+                        </div> 
+    
+                        <div class="job-btn centered">
+                            <a href="#" class="button">
+                                <span>גלה עוד </span>
+                                <img src="images/icons/yellow-arrow-left-small.png" alt="">
+                            </a>
+                        </div>
+                           
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+    <section class="satisfaction">
+        <div class="section-inner">
+            <div class="satisfaction-right ce">
+                <div class="img-title">
+                    <img src="images/jobs/satisfaction-title.png" alt="">
+                </div>
+                <div class="satisfaction-title">
+                    9.2 בסקר שביעות רצון לקוחות
+                </div>
+                <div class="satisfaction-desc">
+                    עפ”י סקר שערכנו בקרב לקוחות החברה בו בדקנו את שביעות רצונם ממספר מאפיינים במתן השירות, קיבלנו את הציון הגבוה 9.2.
+                    ציון זה משקף את הסטנדרט הגבוה שלנו בכל פעולה המתבצעת, ללא פשרות!
+                    *סקר לקוחות עמית 2022
+            </div>
+        </div>
+        <div class="satisfaction-left">
+            <img src="images/jobs/satisfaction-left.png" alt="">
+        </div>
+    </section>
+ 
+    <section class="customer-jobs">
+       <div class="section-inner">
+        <div class="title">
+            משרות   
+            <span>
+                אצל לקוחותינו
+            </span>
+        </div>
+
+        <div class="customer-jobs-list">
+                <div class="customer-jobs-list-item">
+                    <div class="job-img">
+                        <img src="images/jobs/job-img-1.png" alt="">
+                    </div>
+                    <div class="job-list-content">
+                        <div class="inside-content">
+                            <div class="job-list-title">
+                                מתאם לוגיסטי
+                            </div>
+                            <div class="job-list-desc">
+                                פיקוח ובקרה שוטפים מול מסופי המטען האוויריים
+                            </div> 
+                        </div>
+
+                        <div class="job-list-btn">
+                            <a href="#" class="button">
+                                <span>גלה עוד </span>
+                                <img src="images/icons/yellow-arrow-left-small.png" alt="">
+                            </a>
+                        </div>
+
+                    </div>
+
+                    
+                </div>
+                <div class="customer-jobs-list-item">
+                    <div class="job-img">
+                        <img src="images/jobs/job-img-2.png" alt="">
+                    </div>
+                    <div class="job-list-content">
+                        <div class="inside-content">
+                            <div class="job-list-title">
+                                מתאם לוגיסטי
+                            </div>
+                            <div class="job-list-desc">
+                                פיקוח ובקרה שוטפים מול מסופי המטען האוויריים
+                            </div> 
+                        </div>
+                        
+                        <div class="job-list-btn">
+                            <a href="#" class="button">
+                                <span>גלה עוד </span>
+                                <img src="images/icons/yellow-arrow-left-small.png" alt="">
+                            </a>
+                        </div>
+
+                    </div>
+
+                    
+                </div>
+                <div class="customer-jobs-list-item">
+                    <div class="job-img">
+                        <img src="images/jobs/job-img-3.png" alt="">
+                    </div>
+                    <div class="job-list-content">
+                        <div class="inside-content">
+                            <div class="job-list-title">
+                                מתאם לוגיסטי
+                            </div>
+                            <div class="job-list-desc">
+                                פיקוח ובקרה שוטפים מול מסופי המטען האוויריים
+                            </div> 
+                        </div>
+                        
+                        <div class="job-list-btn">
+                            <a href="#" class="button">
+                                <span>גלה עוד </span>
+                                <img src="images/icons/yellow-arrow-left-small.png" alt="">
+                            </a>
+                        </div>
+
+                    </div>
+
+                    
+                </div>
+                <div class="customer-jobs-list-item">
+                    <div class="job-img">
+                        <img src="images/jobs/job-img-4.png" alt="">
+                    </div>
+                    <div class="job-list-content">
+                        <div class="inside-content">
+                            <div class="job-list-title">
+                                מתאם לוגיסטי
+                            </div>
+                            <div class="job-list-desc">
+                                פיקוח ובקרה שוטפים מול מסופי המטען האוויריים
+                            </div> 
+                        </div>
+                        
+                        <div class="job-list-btn">
+                            <a href="#" class="button">
+                                <span>גלה עוד </span>
+                                <img src="images/icons/yellow-arrow-left-small.png" alt="">
+                            </a>
+                        </div>
+
+                    </div>
+
+                    
+                </div>
+        </div>
+
+       </div>
+    </section>
+
+	<footer>
+		<div class="footer-inner first">
+			<!-- Title -->
+			<div class="title">
+				אנו נספק לכם את
+				<span> המידע שתבקשו </span>
+			</div>
+
+			<!-- Form Section -->
+			<form class="footer-form">
+				<input type="text" placeholder="שם מלא:" class="input-field" />
+				<input type="text" placeholder="טלפון:" class="input-field" />
+				<input type="email" placeholder="אימייל:" class="input-field" />
+				<button type="submit" style="margin-left: 10px">שלח פרטים <img
+						src="images/icons/arrow-blue-left-small.png" alt="" /></button>
+			</form>
+
+			<img class="a-logo" src="images/footer/A.png" alt="" />
+			<img class="plus" src="images/footer/plus.png" alt="" />
+		</div>
+		<div class="line"></div>
+		<div class="footer-inner second">
+			<!-- Links Section -->
+			<div class="footer-columns">
+				<div class="column">
+					<h3>מפת האתר</h3>
+					<ul>
+						<li><a href="#">עמוד בית</a></li>
+						<li><a href="#">אודות</a></li>
+						<li><a href="#">מושגים</a></li>
+						<li><a href="#">דברו איתנו</a></li>
+						<li><a href="#">דרושים</a></li>
+					</ul>
+				</div>
+				<!-- ... (Repeat the above <div> block for each column) ... -->
+				<div class="column">
+					<h3>שירותים</h3>
+					<ul>
+						<li><a href="#"> יבוא</a></li>
+						<li><a href="#">יצוא</a></li>
+						<li><a href="#">עמילות מכס</a></li>
+						<li><a href="#"> הובלה יבשתית</a></li>
+						<li><a href="#">ייעוץ טרום יבוא/יצוא</a></li>
+						<li><a href="#"></a>תקנים ואישורים</li>
+						<li><a href="#"></a>משלוחי צד ג’</li>
+						<li><a href="#"></a>פרויקטים</li>
+					</ul>
+				</div>
+
+				<div class="column">
+					<h3>פתרונות מיוחדים</h3>
+					<ul>
+						<li><a href="#">ביטוח ימי</a></li>
+						<li><a href="#">תערוכות</a></li>
+						<li><a href="#">מטעני חומ”ס</a></li>
+						<li><a href="#">מטענים רגישים</a></li>
+						<li><a href="#">מטענים מתכלים</a></li>
+					</ul>
+				</div>
+
+				<div class="column">
+					<h3>סקטורים</h3>
+					<ul>
+						<li><a href="#">רכב</a></li>
+						<li><a href="#">בקרת טמפרטורה</a></li>
+						<li><a href="#">פארמה</a></li>
+						<li><a href="#">מזון</a></li>
+						<li><a href="#">הייטק</a></li>
+						<li><a href="#">אנרגיה ותשתיות</a></li>
+						<li><a href="#">קמעונאות</a></li>
+						<li><a href="#">תעשייה</a></li>
+						<li><a href="#">טקסטיל</a></li>
+					</ul>
+				</div>
+
+				<div class="column">
+					<h3>טוב לדעת</h3>
+					<ul>
+						<li><a href="#">מושגים</a></li>
+						<li><a href="#">הידע שלנו</a></li>
+						<li><a href="#">עדכונים וחדשות</a></li>
+						<li><a href="#">טפסים</a></li>
+					</ul>
+				</div>
+
+				<div class="column icons">
+					<h3>ליצירת קשר</h3>
+					<ul>
+						<li>
+							<a href="#"><img src="images/footer/location.png" alt="" class="icon" /> איירפורט סיטי,
+								הירדן 2, לוד</a>
+						</li>
+						<li>
+							<a href="#"><img src="images/footer/email.png" alt="" class="icon" />
+								infoamit@amit.co.il</a>
+						</li>
+						<li>
+							<a href="#"><img src="images/footer/phone.png" alt="" class="icon" /> 03-9720000</a>
+						</li>
+						<li>
+							<a href="#"><img src="images/footer/website.png" alt="" class="icon" />
+								https://geodis.com</a>
+						</li>
+					</ul>
+					<div class="social">
+						<img src="images/footer/Linkin.png" alt="" />
+						<img src="images/footer/Facebook.png" alt="" />
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="info">
+			<div class="item">כל הזכויות שמורות לעמית שילוח בע”מ</div>
+			<div class="item">תנאי שימוש | הגנת פרטיות | הצהרת נגישות</div>
+			<div class="item">
+				עיצוב ובניית אתרים
+				<a href="https://www.extra.co.il/" target="_blank"><span> extra </span> דיגיטל </a>
+			</div>
+		</div>
+	</footer>
+
+
+</body>
+
+</html>

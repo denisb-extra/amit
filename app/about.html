@@ -623,7 +623,7 @@
 
 			// Check if mobile
 			function isMobile() {
-				return window.innerWidth <= 800;
+				return window.innerWidth <= 950;
 			}
 
 			// Move the elements on mobile
@@ -659,12 +659,12 @@
 			});
 
 			// Hide all the .window elements by default
-			$('.window').hide();
+			//$('.window').hide();
 
 			// On hover or click of any .item, show its corresponding .window
 			$('.item').on('mouseenter click', function () {
 				// First, hide all the windows
-				$('.window').hide();
+				if (isMobile())  $('.window').hide();
 
 				// Find the index of the hovered/clicked .item
 				var index = $(this).attr('data-window-index');
@@ -675,7 +675,7 @@
 
 			// If you want to hide the window when the mouse leaves the item
 			$('.item').mouseleave(function () {
-				$('.window').hide();
+				if (isMobile()) $('.window').hide();
 			});
 		});
 

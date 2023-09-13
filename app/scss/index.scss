@@ -634,7 +634,11 @@ section.experience {
         flex-wrap: nowrap;
         max-width: 1920px;
         padding: 0;
-        min-height: 70vw;
+        min-height: 880px;
+
+        @media only screen and (max-width : $lw) {
+            min-height: 800px;
+        }
 
         .right-side,
         .left-side {
@@ -753,16 +757,19 @@ section.experience {
 
         .left-side {
             @extend .side;
+            display: flex;
+            justify-content: center;
             position: relative;
             align-items: center;
             background-color: #F5F5F5;
             width: 60%;
-            padding-top: 300px;
+            min-height: 50vw;
+
+       
 
 
             .circle {
                 @include commonCircleStyles;
-                margin-top: 20px;
 
                 img {
                     margin: 0;
@@ -809,6 +816,12 @@ section.experience {
                     .window {
                         top: -210px;
                     }
+
+                    @media only screen and (max-width : $tw) {
+                        .window {
+                              top: -235px;
+                        }
+                    }
                 }
 
                 .approach {
@@ -844,9 +857,16 @@ section.experience {
                 .experience {
                     flex-direction: column-reverse;
                     bottom: -64px;
+                    z-index: 100;
 
                     .window {
                         bottom: -210px;
+                    }
+
+                    @media only screen and (max-width : $tw) {
+                        .window {
+                            bottom: -235px;
+                        }
                     }
                 }
 
@@ -1136,6 +1156,20 @@ section.services {
                                 font-size: 24px;
                             }
                         }
+                    }
+
+                    .flip-card-back {
+
+                        .title {
+                            font-size: 22px;
+                        }
+                       .content {
+                            font-size: 14px;
+                       }
+
+                       .read-more {
+                            font-size: 16px;
+                       }
                     }
 
 
@@ -2110,7 +2144,7 @@ section.about {
         }
 
         .content {
-            padding: 0 10vw;
+           /* padding: 0 10vw; */
         }
     }
 
@@ -2868,13 +2902,25 @@ section.about.experience {
             min-height: auto;
 
             .vision {
-                bottom: -140px;
+                bottom: 0;
+
+                @media only screen and (max-width : 1950px) {
+                    .desc {
+                        font-size: 1.4vw;
+                    }
+                }
+
+                @media only screen and (max-width : $mw) {
+                    bottom: -120px;
+                    .desc {
+                        font-size: 16px;
+                    }
+                }
             }
         }
 
         .left-side {
             width: 100%;
-            padding: 160px 20px;
 
             .content {
                 padding: 0;
@@ -3410,3 +3456,383 @@ section.insurance.articles {
     }
 }
 /* --------------------- /Section insurance.articles ---------------------- */
+
+/* ---------------------- Section jobs.intro ---------------------- */
+section.jobs.intro {
+    background-image: url(../images/jobs/bg.png);
+    background-repeat: no-repeat;
+    background-position: top center;
+    padding-bottom: 0;
+    .section-inner {
+        .title {
+            padding-bottom: 20px;
+        }
+
+        .desc {
+            font-family: Assistant-Regular;
+            font-size: 18px;
+            padding: 0 17vw;
+            span {
+                font-family: Assistant-Bold;
+            }
+        }
+
+        .sub-title {
+            padding: 50px 0;
+            font-family: Assistant-Bold;
+            font-size: 32px;
+        }
+
+        .why-with-us {
+            display: flex;
+            flex-direction: row;
+            @media only screen and (max-width : $mw) {
+                flex-direction: column;
+            }
+            .item {
+                display: flex;
+                flex-direction: row;
+                padding-left: 20px;
+                border-left: 1px solid rgba(0, 0, 0, 0.493);
+
+                @media only screen and (max-width : $mw) {
+                    border-left: none;
+                    
+                    padding: 20px 0px;
+                    border-bottom: 1px solid rgba(0, 0, 0, 0.493);
+                }
+
+                    .img {
+                        padding:  0 20px;
+                    }
+
+                .title {
+                    font-family: Assistant-Bold;
+                    font-size: 32px;
+                    text-align: right;
+                    padding-bottom: 0;
+                    color: var(--color-black);
+                }
+
+                .text {
+                    font-family: Assistant-Regular;
+                    font-size: 18px;
+                    padding-top: 20px;
+                    line-height: 1.5;
+                    text-align: right;
+                    padding-top: 0;
+                    color: var(--color-black);
+
+                }
+            }
+
+            .item:last-child {
+                border-left: none;
+            }
+        }
+
+        .content-img {
+            padding-top: 50px;
+            display: flex;
+            justify-content: center;
+            img {
+                width: 100%;
+                max-width: 100%;
+            }
+        }
+        
+    }
+}
+/* --------------------- /Section jobs.intro ---------------------- */
+
+/* ---------------------- Section open-jobs -
+--------------------- */
+section.open-jobs {
+    overflow: visible;
+    background-color: #F5F5F5;
+    .section-inner {
+        padding-top: 70px;
+        .title-container {
+            background-color: var(--color-main);
+            position: absolute;
+            padding: 50px;
+            top: -180px;
+            z-index: 100;
+
+            @media only screen and (max-width : $mw) {
+                position: relative;
+                top: -40px;
+            }
+
+
+            .open-title {
+                font-family: 'Almoni-Tzar-Bold';
+                font-size: 52px;
+                span {
+                    color: white;
+                }
+
+                @media only screen and (max-width : $mw) {
+                    font-size: 8vw;
+                }
+            }
+
+            .open-desc {
+                font-family: Assistant-Bold;
+                font-size: 32px;
+
+                @media only screen and (max-width : $mw) {
+                    font-size: 5vw;
+                }
+            }
+        }
+
+        .jobs-container {
+            .job {
+                display: flex;
+                flex-direction: row;
+                width: 100%;
+                justify-content: space-between;
+
+                @media only screen and (max-width : $mw) {
+                    flex-wrap: wrap;
+                }
+
+                .job-item {
+                    width: 23vw;
+                    max-width: 365px;
+
+                    @media only screen and (max-width : $mw) {
+                        width: 49%;
+                        max-width: 100%;
+                    }
+
+                    .job-img {
+                       img {
+                        width: 100%;
+                       }
+                    }
+
+                    .job-title {
+                        font-family: Assistant-Bold;
+                        font-size: 32px;
+                    }
+
+                    .job-desc {
+                        font-family: Assistant-Regular;
+                        font-size: 18px;
+                    }
+
+                    .job-btn {
+                        font-family: Assistant-Bold;
+                        padding-top: 20px;
+                    }
+
+                }
+
+                @media only screen and (max-width : $mw) {
+                    .job-item {
+                        margin-top: 20px;
+                        .job-title {
+                            font-family: Assistant-Bold;
+                            font-size: 24px;
+                        }
+
+                        .job-desc {
+                            font-family: Assistant-Regular;
+                            font-size: 16px;
+                        }
+
+                        .job-btn {
+                            font-family: Assistant-Bold;
+                            padding-top: 16px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    
+}
+/* --------------------- /Section open-jobs ---------------------- */
+
+/* ---------------------- Section satisfaction ---------------------- */
+section.satisfaction {
+    .section-inner {
+        display: flex;
+
+
+        .satisfaction-right {
+            width: 50%;
+
+            .satisfaction-title {
+                font-family: Assistant-Bold;
+                font-size: 32px;
+                padding-bottom: 20px;
+                padding-top: 20px;
+            }
+
+            .satisfaction-desc {
+                font-family: Assistant-Regular;
+                font-size: 18px;
+                line-height: 1.5;
+                padding-left: 100px;
+            }
+        }
+
+        .satisfaction-left {
+            width: 50%;
+        }
+    }
+
+    @media only screen and (max-width : $mw) {
+        .section-inner {
+            flex-direction: column;
+
+            .satisfaction-right {
+                width: 100%;
+
+                .img-title {
+                    display: flex;
+                    justify-content: center;
+                }
+                
+                .satisfaction-title {
+                    display: flex;
+                    justify-content: center;
+                    font-size: 24px;
+                }
+
+                .satisfaction-desc {
+                    display: flex;
+                    justify-content: center;
+                    padding: 0 20px;
+                    padding-bottom: 40px;
+                }
+
+            }
+        }
+    }
+}
+/* --------------------- /Section satisfaction ---------------------- */
+
+/* ---------------------- Section customer-jobs ---------------------- */
+section.customer-jobs {
+    .section-inner {
+        display: flex;
+        flex-direction: column;
+
+        .title {
+            padding-bottom: 80px;
+        }
+
+        .customer-jobs-list-item {
+            display: flex;
+            flex-direction: row;
+            margin-top: 30px;
+
+
+            .job-img {
+                img {
+                    max-width: 180px;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            .job-list-content {
+
+                display: flex;
+                flex-direction: row;
+                margin-right: 40px;
+                border-bottom: 1px solid  rgba(0, 0, 0, 0.493);
+                width: 100%;
+                justify-content: space-between;
+                
+                .inside-content {
+
+                    .job-list-title {
+                        font-family: Assistant-Bold;
+                        font-size: 32px;
+                        padding-bottom: 20px;
+                    }
+
+                    .job-list-desc {
+                        font-family: Assistant-Regular;
+                        font-size: 18px;
+                    }
+
+                }
+
+                .job-list-btn {
+                    display: flex;
+                    justify-content: center;
+                    padding-top: 10px;
+                    font-family: Assistant-Bold;
+                    font-size: 18px;
+                }
+                
+            }
+        }
+    }
+
+    @media only screen and (max-width : $mw) {
+        .section-inner {
+
+            .title {
+                padding-bottom: 30px;
+            }
+
+            .customer-jobs-list-item {
+                flex-direction: column;
+                padding-bottom: 40px;
+                border-bottom: 1px solid  rgba(0, 0, 0, 0.493);
+                margin-top: 50px;
+
+
+                .job-img {
+                    display: flex;
+                    justify-content: center;
+                    margin-bottom: 20px;
+                     
+                        img {
+                            max-width: 300px;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+                }
+
+                .job-list-title {
+                    display: flex;
+                    justify-content: center;
+                }
+
+                .job-list-content {
+                    display: flex;
+                    flex-direction: column;
+                    margin-right: 0px;
+                    border-bottom: none;
+
+                    .inside-content {
+                        padding: 0 20px;
+
+                        .job-list-desc {
+                            display: flex;
+                            justify-content: center;
+                        }
+                    }
+
+                    .job-list-btn {
+                        display: flex;
+                        justify-content: center;
+                        padding-top: 10px;
+                        font-family: Assistant-Bold;
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
+}
+/* --------------------- /Section customer-jobs ---------------------- */
