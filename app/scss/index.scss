@@ -2253,22 +2253,7 @@ section.page-content {
                 padding-top: 20px;
                 line-height: 2;
 
-                ul {
-                    -webkit-padding-start: 0;
-                    margin: 0;
-                    padding-right: 20px;
-                    list-style-type: none; /* Removes default bullets */
-                }
-                
-                ul {
-                    li::before {
-                        content: "\2022"; /* Unicode bullet point */
-                        color: yellow;
-                        display: inline-block;
-                        width: 1em;
-                        margin-left: -1em; /* Adjusts position of the bullet */
-                    }
-                } 
+
                 
 
                 @media only screen and (max-width : $mw) {
