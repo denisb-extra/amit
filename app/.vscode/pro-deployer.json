@@ -1,0 +1,28 @@
+{
+	"enableStatusBarItem": true,
+	"enableQuickPick": true,
+	"uploadOnSave": true,
+	"autoDelete": true,
+	"checkGitignore": false,
+	"activeTargets": [
+		"My FTP"
+	],
+	"concurrency": 5,
+	"ignore": [
+		".git/**/*",
+		".vscode/**/*"
+	],
+	"targets": [
+		{
+			"name": "Amit",
+			"type": "ftp",
+			"host": "ftp.s305.upress.link",
+			"port": 21,
+			"user": "extra@amit.s305.upress.link",
+			"password": "@m^RH835@jBVMu",
+			"dir": "/",
+			"privateKey": null,
+			"passphrase": null
+		}
+	]
+}
