@@ -278,6 +278,12 @@ section {
   .decor img {
     max-width: 100%; }
 
+@-webkit-keyframes spin {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
+
 @keyframes spin {
   from {
     transform: rotate(0deg); }
@@ -287,7 +293,8 @@ section {
 .loading:after {
   display: inline-block;
   content: "";
-  animation: spin 1.75s linear infinite;
+  -webkit-animation: spin 1.75s linear infinite;
+          animation: spin 1.75s linear infinite;
   height: 31px;
   width: 31px;
   position: absolute;
@@ -357,7 +364,7 @@ header {
       header.home.page .main-menu li .sub-menu li a {
         color: var(--color-second); }
       header.home.page .main-menu li.menu-item-has-children {
-        filter: brightness(0) invert(1); }
+        background-image: url("../images/icons/arrow-menu-w.svg") !important; }
     header.home .section-inner {
       display: flex;
       align-items: center;
@@ -517,15 +524,19 @@ section.hero {
       top: 0;
       right: 0;
       z-index: 1;
-      animation: sea-right 4s forwards;
-      animation-delay: 0s;
+      -webkit-animation: sea-right 4s forwards;
+              animation: sea-right 4s forwards;
+      -webkit-animation-delay: 0s;
+              animation-delay: 0s;
       height: 100%; }
     section.hero .hero-animations .sea-left {
       top: 0;
       left: 0;
       z-index: 1;
-      animation: sea-left 4s forwards;
-      animation-delay: 0s;
+      -webkit-animation: sea-left 4s forwards;
+              animation: sea-left 4s forwards;
+      -webkit-animation-delay: 0s;
+              animation-delay: 0s;
       height: 100%; }
     section.hero .hero-animations .bg-a {
       top: 100px;
@@ -541,22 +552,28 @@ section.hero {
       z-index: 2;
       top: 39%;
       right: -200px;
-      animation: ship 4s forwards;
-      animation-delay: 1s;
+      -webkit-animation: ship 4s forwards;
+              animation: ship 4s forwards;
+      -webkit-animation-delay: 1s;
+              animation-delay: 1s;
       width: 58.6%; }
     section.hero .hero-animations .plane {
       left: -200px;
       bottom: 50%;
       z-index: 5;
-      animation: plane 6s forwards;
-      animation-delay: 0s;
+      -webkit-animation: plane 6s forwards;
+              animation: plane 6s forwards;
+      -webkit-animation-delay: 0s;
+              animation-delay: 0s;
       width: 34.4%; }
     section.hero .hero-animations .plus {
       z-index: 4;
       right: 13%;
       top: 36.7%;
-      animation: plus 1s forwards;
-      animation-delay: 4s;
+      -webkit-animation: plus 1s forwards;
+              animation: plus 1s forwards;
+      -webkit-animation-delay: 4s;
+              animation-delay: 4s;
       opacity: 0;
       width: 7vw;
       max-width: 150px; }
@@ -573,7 +590,8 @@ section.hero {
     margin-top: -62px;
     line-height: 1.1;
     opacity: 1;
-    animation: text 1s forwards; }
+    -webkit-animation: text 1s forwards;
+            animation: text 1s forwards; }
     section.hero .text .letter {
       display: inline-block;
       transform-origin: bottom;
@@ -611,12 +629,27 @@ section.hero {
       top: 54.7%; } }
 
 /* --------------------- /Section hero ---------------------- */
+@-webkit-keyframes sea-right {
+  0% {
+    right: -200px;
+    opacity: 1; }
+  100% {
+    right: 0;
+    opacity: 1; } }
 @keyframes sea-right {
   0% {
     right: -200px;
     opacity: 1; }
   100% {
     right: 0;
+    opacity: 1; } }
+
+@-webkit-keyframes sea-left {
+  0% {
+    left: -200px;
+    opacity: 1; }
+  100% {
+    left: 0;
     opacity: 1; } }
 
 @keyframes sea-left {
@@ -627,6 +660,14 @@ section.hero {
     left: 0;
     opacity: 1; } }
 
+@-webkit-keyframes ship {
+  0% {
+    right: -200px;
+    opacity: 1; }
+  100% {
+    right: 0;
+    opacity: 1; } }
+
 @keyframes ship {
   0% {
     right: -200px;
@@ -635,6 +676,14 @@ section.hero {
     right: 0;
     opacity: 1; } }
 
+@-webkit-keyframes plus {
+  0% {
+    opacity: 0;
+    transform: scale(1.25); }
+  100% {
+    opacity: 1;
+    transform: scale(1); } }
+
 @keyframes plus {
   0% {
     opacity: 0;
@@ -642,6 +691,14 @@ section.hero {
   100% {
     opacity: 1;
     transform: scale(1); } }
+
+@-webkit-keyframes plane {
+  0% {
+    left: -200px;
+    bottom: 500px; }
+  100% {
+    bottom: 0;
+    left: 18.5%; } }
 
 @keyframes plane {
   0% {
@@ -1143,13 +1200,17 @@ section.sectors {
     section.sectors .swiper-container .swiper-wrapper {
       align-items: center; }
     section.sectors .swiper-container .swiper-slide {
-      text-align: center; }
-    section.sectors .swiper-container .swiper-slide.swiper-slide-active {
-      margin-left: 240px;
-      margin-right: 150px; }
-      section.sectors .swiper-container .swiper-slide.swiper-slide-active .box-sector .info {
-        width: 430px;
-        opacity: 1; }
+      text-align: center;
+      transform: translateX(130px);
+      width: 125px !important; }
+      section.sectors .swiper-container .swiper-slide.swiper-slide-active {
+        margin-left: 240px;
+        margin-right: 150px; }
+        section.sectors .swiper-container .swiper-slide.swiper-slide-active .box-sector .info {
+          width: 430px;
+          opacity: 1; }
+        section.sectors .swiper-container .swiper-slide.swiper-slide-active .box-sector .circle {
+          transform: scale(1.2) translateX(-10px); }
     section.sectors .swiper-container .nav {
       display: flex;
       justify-content: center;
@@ -1179,8 +1240,10 @@ section.sectors {
       align-items: center;
       justify-content: center;
       width: -moz-fit-content;
+      width: -webkit-fit-content;
       width: fit-content;
       height: -moz-fit-content;
+      height: -webkit-fit-content;
       height: fit-content;
       margin: auto;
       transform: none; }
@@ -1408,6 +1471,7 @@ section.share-knowledge {
         padding: 0 30px;
         border-left: 1px solid black;
         height: -moz-max-content;
+        height: -webkit-max-content;
         height: max-content;
         white-space: nowrap;
         cursor: pointer; }

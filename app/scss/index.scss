@@ -36,8 +36,7 @@ header {
                 
     
                 li.menu-item-has-children {
-                    filter: brightness(0) invert(1);
-    
+                    background-image: url("../images/icons/arrow-menu-w.svg") !important;
                 }
             } 
         }
@@ -1192,41 +1191,39 @@ section.sectors {
 
     .swiper-container {
         margin-top: 55px;
-
         .swiper-wrapper {
             align-items: center;
         }
-
         .swiper-slide {
             text-align: center;
-        }
-
-        .swiper-slide.swiper-slide-active {
-            margin-left: 240px;
-            margin-right: 150px;
-
-            .box-sector {
-                .info {
-                    width: 430px;
-                    opacity: 1;
+            transform: translateX(130px);
+            width: 125px !important;
+            &.swiper-slide-active {
+                margin-left: 240px;
+                margin-right: 150px;
+                .box-sector {
+                    .info {
+                        width: 430px;
+                        opacity: 1;
+                    }
+                    .circle {
+                        transform: scale(1.2) translateX(-10px);
+                    }
                 }
             }
         }
-
         .nav {
             display: flex;
             justify-content: center;
             margin-top: 35px;
-
             .arrow {
                 height: 50px;
                 width: 50px;
                 background: var(--color-main);
                 border-radius: 100%;
                 cursor: pointer;
-                display: flex;
-                align-items: center;
-                justify-content: center;
+
+                @include flex-center;
                 margin: 15px;
             }
         }
