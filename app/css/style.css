@@ -84,17 +84,9 @@ h6 {
 
 ul {
   -webkit-padding-start: 0;
+  list-style: none;
   margin: 0;
-  padding-right: 20px;
-  list-style-type: none;
-  /* Removes default bullets */ }
-
-ul li::before {
-  content: "\2022";
-  color: var(--color-main);
-  display: inline-block;
-  width: 1em;
-  margin-left: 2px; }
+  padding: 0; }
 
 .title {
   font-family: Almoni-Tzar-Bold;
@@ -1883,6 +1875,18 @@ section.page-content {
         font-size: 18px;
         padding-top: 20px;
         line-height: 2; }
+        section.page-content .section-inner .right .paragraph ul {
+          -webkit-padding-start: 0;
+          margin: 0;
+          padding-right: 20px;
+          list-style-type: none;
+          /* Removes default bullets */ }
+          section.page-content .section-inner .right .paragraph ul li::before {
+            content: "\2022";
+            color: var(--color-main);
+            display: inline-block;
+            width: 1em;
+            margin-left: 2px; }
         @media only screen and (max-width: 950px) {
           section.page-content .section-inner .right .paragraph {
             padding-top: 0px; } }

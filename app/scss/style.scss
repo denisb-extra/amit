@@ -196,20 +196,10 @@ h6 {
 
 ul {
 	-webkit-padding-start: 0;
+	list-style: none;
 	margin: 0;
-	padding-right: 20px;
-	list-style-type: none; /* Removes default bullets */
+	padding: 0;
 }
-
-ul {
-	li::before {
-		content: "\2022";
-		color: var(--color-main);
-		display: inline-block;
-		width: 1em;
-		margin-left: 2px;
-	}
-} 
 
 // Moved common styles for circles to a mixin for clarity
 @mixin commonCircleStyles {

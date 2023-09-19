@@ -2253,8 +2253,20 @@ section.page-content {
                 padding-top: 20px;
                 line-height: 2;
 
+                ul {
+                    -webkit-padding-start: 0;
+                    margin: 0;
+                    padding-right: 20px;
+                    list-style-type: none; /* Removes default bullets */
 
-                
+                    li::before {
+                        content: "\2022";
+                        color: var(--color-main);
+                        display: inline-block;
+                        width: 1em;
+                        margin-left: 2px;
+                    }
+                }
 
                 @media only screen and (max-width : $mw) {
                     padding-top: 0px;
